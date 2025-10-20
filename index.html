@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mahrab Hossen</title>
@@ -10,13 +9,504 @@
     font-weight='bold'>M</text></svg>">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Enhanced Hero Overlay for Better Text Visibility */
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(
+                135deg,
+                rgba(10, 10, 10, 0.65) 0%,
+                rgba(26, 26, 26, 0.55) 50%,
+                rgba(10, 10, 10, 0.65) 100%
+            );
+            z-index: 0;
+        }
+
+        .light-mode .hero::before {
+            background: linear-gradient(
+                135deg,
+                rgba(255, 255, 255, 0.75) 0%,
+                rgba(245, 245, 245, 0.65) 50%,
+                rgba(255, 255, 255, 0.75) 100%
+            );
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Enhanced Hero Title Styles */
+        .hero-content h1 {
+            font-size: 4rem;
+            margin-bottom: 1.5rem;
+            font-weight: 800;
+            letter-spacing: -1px;
+            position: relative;
+            display: inline-block;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .light-mode .hero-content h1 {
+            text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .hero-content h1 .static-text {
+            color: #ffffff;
+            display: inline-block;
+            font-weight: 700;
+        }
+
+        .light-mode .hero-content h1 .static-text {
+            color: #1a1a1a;
+        }
+
+        .hero-content h1 .typing-container {
+            display: inline-block;
+            position: relative;
+        }
+
+        .hero-content h1 .typing-text {
+            background: linear-gradient(135deg, #00d4ff 0%, #00ffcc 50%, #00d4ff 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            display: inline-block;
+            min-width: 300px;
+            text-align: left;
+            font-weight: 800;
+            background-size: 200% auto;
+            animation: shimmer 3s linear infinite;
+        }
+
+        .light-mode .hero-content h1 .typing-text {
+            background: linear-gradient(135deg, #0099cc 0%, #00d4ff 50%, #0099cc 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            background-size: 200% auto;
+        }
+
+        @keyframes shimmer {
+            to {
+                background-position: 200% center;
+            }
+        }
+
+        .hero-content h1 .cursor {
+            display: inline-block;
+            width: 3px;
+            height: 1em;
+            background: #00d4ff;
+            margin-left: 5px;
+            animation: blink 1s infinite;
+            vertical-align: middle;
+            box-shadow: 0 0 10px #00d4ff;
+        }
+
+        .light-mode .hero-content h1 .cursor {
+            background: #0099cc;
+            box-shadow: 0 0 8px #0099cc;
+        }
+
+        @keyframes blink {
+            0%, 50% { opacity: 1; }
+            51%, 100% { opacity: 0; }
+        }
+
+        /* Enhanced Subtitle */
+        .hero-content .subtitle {
+            font-size: 1.5rem;
+            color: #e0e0e0;
+            margin-bottom: 2rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            position: relative;
+            display: inline-block;
+            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .light-mode .hero-content .subtitle {
+            color: #333333;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        .hero-content .subtitle::before,
+        .hero-content .subtitle::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            width: 60px;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #00d4ff, transparent);
+            box-shadow: 0 0 8px #00d4ff;
+        }
+
+        .light-mode .hero-content .subtitle::before,
+        .light-mode .hero-content .subtitle::after {
+            background: linear-gradient(90deg, transparent, #0099cc, transparent);
+            box-shadow: 0 0 6px rgba(0, 153, 204, 0.3);
+        }
+
+        .hero-content .subtitle::before {
+            left: -80px;
+        }
+
+        .hero-content .subtitle::after {
+            right: -80px;
+        }
+
+        /* Enhanced Description */
+        .hero-content .description {
+            font-size: 1.2rem;
+            color: #ffffff;
+            margin-bottom: 3rem;
+            line-height: 1.9;
+            max-width: 750px;
+            margin-left: auto;
+            margin-right: auto;
+            position: relative;
+            padding: 2rem 2.5rem;
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 20px;
+            border-left: 5px solid #00d4ff;
+            backdrop-filter: blur(20px);
+            box-shadow: 
+                0 8px 32px rgba(0, 0, 0, 0.6),
+                inset 0 1px 0 rgba(255, 255, 255, 0.1),
+                0 0 0 1px rgba(0, 212, 255, 0.2);
+            font-weight: 400;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+        }
+
+        .light-mode .hero-content .description {
+            background: rgba(255, 255, 255, 0.75);
+            border-left: 5px solid #0099cc;
+            color: #1a1a1a;
+            box-shadow: 
+                0 8px 32px rgba(0, 0, 0, 0.15),
+                inset 0 1px 0 rgba(255, 255, 255, 0.8),
+                0 0 0 1px rgba(0, 153, 204, 0.3);
+            text-shadow: none;
+        }
+
+        .hero-content .description::before {
+            content: '"';
+            position: absolute;
+            top: 5px;
+            left: 15px;
+            font-size: 4rem;
+            color: #00d4ff;
+            opacity: 0.2;
+            font-family: Georgia, serif;
+            line-height: 1;
+        }
+
+        .light-mode .hero-content .description::before {
+            color: #0099cc;
+            opacity: 0.15;
+        }
+
+        /* Highlight text */
+        .hero-content .description .highlight {
+            color: #00ffcc;
+            font-weight: 700;
+            position: relative;
+            text-shadow: 0 0 15px rgba(0, 255, 204, 0.5);
+        }
+
+        .light-mode .hero-content .description .highlight {
+            color: #0099cc;
+            font-weight: 700;
+            text-shadow: 0 0 8px rgba(0, 153, 204, 0.3);
+        }
+
+        /* Additional glow effect for dark mode */
+        .hero-content .description::after {
+            content: '';
+            position: absolute;
+            inset: -2px;
+            background: linear-gradient(45deg, #00d4ff, #00ffcc, #00d4ff);
+            border-radius: 20px;
+            opacity: 0;
+            z-index: -1;
+            filter: blur(20px);
+            transition: opacity 0.3s ease;
+        }
+
+        .hero-content .description:hover::after {
+            opacity: 0.3;
+        }
+
+        .light-mode .hero-content .description:hover::after {
+            opacity: 0.1;
+        }
+
+        /* Enhanced Hero Buttons */
+        .hero-buttons {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 3rem;
+        }
+
+        .btn {
+            padding: 1.2rem 2.5rem;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.05rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.7rem;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 2px solid transparent;
+            position: relative;
+            overflow: hidden;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.2);
+            transform: translate(-50%, -50%);
+            transition: width 0.6s, height 0.6s;
+        }
+
+        .btn:hover::before {
+            width: 300px;
+            height: 300px;
+        }
+
+        .btn span {
+            position: relative;
+            z-index: 1;
+        }
+
+        .btn i {
+            position: relative;
+            z-index: 1;
+            transition: transform 0.3s ease;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #00d4ff 0%, #00ffcc 100%);
+            color: #0a0a0a;
+            box-shadow: 0 4px 20px rgba(0, 212, 255, 0.4);
+        }
+
+        .light-mode .btn-primary {
+            background: linear-gradient(135deg, #0099cc 0%, #00d4ff 100%);
+            color: #ffffff;
+            box-shadow: 0 4px 20px rgba(0, 153, 204, 0.3);
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(0, 212, 255, 0.5);
+        }
+
+        .light-mode .btn-primary:hover {
+            box-shadow: 0 8px 30px rgba(0, 153, 204, 0.4);
+        }
+
+        .btn-primary:hover i {
+            transform: translateX(5px);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            border: 2px solid #00d4ff;
+            color: #00d4ff;
+            box-shadow: 0 4px 20px rgba(0, 212, 255, 0.2);
+        }
+
+        .light-mode .btn-secondary {
+            border: 2px solid #0099cc;
+            color: #0099cc;
+            box-shadow: 0 4px 20px rgba(0, 153, 204, 0.15);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(0, 212, 255, 0.1);
+            border-color: #00ffcc;
+            color: #00ffcc;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(0, 212, 255, 0.3);
+        }
+
+        .light-mode .btn-secondary:hover {
+            background: rgba(0, 153, 204, 0.1);
+            border-color: #00d4ff;
+            color: #0099cc;
+            box-shadow: 0 8px 30px rgba(0, 153, 204, 0.25);
+        }
+
+        .btn-secondary:hover i {
+            transform: translateY(-3px);
+        }
+
+        /* Social Links Enhancement */
+        .social-links {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            margin-top: 2rem;
+        }
+
+        .social-links a {
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            background: rgba(26, 26, 26, 0.8);
+            border: 2px solid rgba(0, 212, 255, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+            color: #00d4ff;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .light-mode .social-links a {
+            background: rgba(255, 255, 255, 0.9);
+            border: 2px solid rgba(0, 153, 204, 0.3);
+            color: #0099cc;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .social-links a::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #00d4ff 0%, #00ffcc 100%);
+            transform: translateY(100%);
+            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            z-index: 0;
+        }
+
+        .light-mode .social-links a::before {
+            background: linear-gradient(135deg, #0099cc 0%, #00d4ff 100%);
+        }
+
+        .social-links a:hover::before {
+            transform: translateY(0);
+        }
+
+        .social-links a i {
+            position: relative;
+            z-index: 1;
+            transition: all 0.3s ease;
+        }
+
+        .social-links a:hover {
+            transform: translateY(-8px) scale(1.1);
+            box-shadow: 0 15px 35px rgba(0, 212, 255, 0.4);
+            border-color: transparent;
+        }
+
+        .light-mode .social-links a:hover {
+            box-shadow: 0 15px 35px rgba(0, 153, 204, 0.3);
+        }
+
+        .social-links a:hover i {
+            color: #ffffff;
+            transform: rotate(360deg);
+            filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.5));
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-content h1 .typing-text {
+                min-width: 200px;
+            }
+
+            .hero-content .subtitle {
+                font-size: 1.2rem;
+                letter-spacing: 2px;
+            }
+
+            .hero-content .subtitle::before,
+            .hero-content .subtitle::after {
+                width: 40px;
+            }
+
+            .hero-content .subtitle::before {
+                left: -50px;
+            }
+
+            .hero-content .subtitle::after {
+                right: -50px;
+            }
+
+            .hero-content .description {
+                font-size: 1rem;
+                padding: 1rem;
+            }
+
+            .btn {
+                padding: 1rem 2rem;
+                font-size: 0.95rem;
+            }
+
+            .social-links a {
+                width: 50px;
+                height: 50px;
+                font-size: 1.2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+
+            .hero-content h1 .typing-text {
+                min-width: 150px;
+                font-size: 2rem;
+            }
+
+            .hero-content .subtitle {
+                font-size: 1rem;
+                letter-spacing: 1px;
+            }
+
+            .hero-content .subtitle::before,
+            .hero-content .subtitle::after {
+                display: none;
+            }
+        }
+    </style>
 </head>
 <body>
     <div class="image-slider">
         <div class="slider-images">
             <img src="assets/mahrab-coding.png" alt="Slider Image 1">
             <img src="assets/bg1.jpg" alt="Slider Image 2">
-            <img src="assets/bg2.jpg" alt="Slider Image 3">
         </div>
     </div>
 
@@ -44,18 +534,23 @@
 
     <main class="hero">
         <div class="hero-content">
-            <h1>Mahrab Hossen</h1>
+            <h1>
+                <span class="static-text">Hi, I'm </span>
+                <span class="typing-container">
+                    <span class="typing-text" id="typingText"></span>
+                    <span class="cursor"></span>
+                </span>
+            </h1>
             <p class="subtitle">Jr. Software Engineer</p>
             <p class="description">
-                Passionate about building robust web applications and solving complex problems with clean, efficient code.
-                
+                Passionate about building <span class="highlight">robust web applications</span> and solving complex problems with <span class="highlight">clean, efficient code</span>. Specializing in PHP and backend development with a drive for continuous learning and innovation.
             </p>
             <div class="hero-buttons">
                 <a href="portfolio.html" class="btn btn-primary">
-                    View My Work <i class="fas fa-arrow-right"></i>
+                    <span>View My Work</span> <i class="fas fa-arrow-right"></i>
                 </a>
                 <a href="assets/resume.pdf" class="btn btn-secondary" download>
-                    <i class="fas fa-download"></i> Download Resume
+                    <i class="fas fa-download"></i> <span>Download Resume</span>
                 </a>
             </div>
             <div class="social-links">
@@ -75,6 +570,7 @@
     <footer>
         <p>&copy; 2025 Mahrab Hossen. All Rights Reserved.</p>
     </footer>
+
     <script src="js/script.js"></script>
 
 </body>
