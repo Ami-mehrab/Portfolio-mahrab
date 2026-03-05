@@ -1,136 +1,177 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About Me | Mahrab Hossen</title>
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%231E3D58'/><text x='50' y='70' font-size='60' text-anchor='middle' fill='%23D4AF37' 
-      font-family='Arial, sans-serif' font-weight='bold'>M</text></svg>">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | Mahrab Hossen</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='18' fill='%23111'/><text x='50' y='68' font-size='58' text-anchor='middle' fill='%23a78bfa' font-family='Georgia,serif' font-weight='bold'>M</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="bg-grid"></div>
+    <div class="bg-orb orb-1"></div>
+    <div class="bg-orb orb-2"></div>
 
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-    />
-    <link rel="stylesheet" href="css/style.css" />
-  </head>
-  <body>
-    <header>
-      <nav>
-        <a href="index.html" class="logo">Mahrab Hossen</a>
-
-        <div class="nav-links" id="navLinks">
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="portfolio.html">Portfolio</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
-          <button class="theme-toggle" id="themeToggle">
-            <i class="fas fa-moon"></i>
-          </button>
-        </div>
-
-        <div class="hamburger" id="hamburger">
-          <div></div>
-          <div></div>
-          <div></div>
-        </div>
-      </nav>
+    <header id="header">
+        <nav class="nav-container">
+            <a href="index.html" class="logo"><span class="logo-name">Mahrab Hossen</span><span class="logo-tag">&lt;dev/&gt;</span></a>
+            <div class="hamburger" id="hamburger">
+                <span></span><span></span><span></span>
+            </div>
+            <div class="nav-links" id="navLinks">
+                <ul>
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link active">About</a></li>
+                    <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+        </nav>
     </header>
 
-    <main>
-      <div class="container">
-        <h1 class="section-title">About Me</h1>
+    <main class="page-main">
+        <div class="container">
 
-        <div class="about-container">
-          <div class="profile-card">
-            <div class="profile-image">
-              <img src="assets/profile.png" alt="Mahrab Hossen" />
+            <!-- Page Header -->
+            <div class="page-header" data-animate>
+                <span class="page-tag">// about.me</span>
+                <h1 class="page-title">The <em>person</em> behind the code</h1>
             </div>
-            <h3>Mahrab Hossen</h3>
-            <p>Jr. Software Engineer</p>
-            <div class="social-links">
-              <a
-                href="https://www.facebook.com/mehrabhossen.bappy"
-                target="_blank"
-                aria-label="Facebook"
-              >
-                <i class="fab fa-facebook-f"></i>
-              </a>
-              <a
-                href="https://github.com/Ami-mehrab"
-                target="_blank"
-                aria-label="GitHub"
-              >
-                <i class="fab fa-github"></i>
-              </a>
-              <a
-                href="https://www.linkedin.com/in/iam-mehrabbappy"
-                target="_blank"
-                aria-label="LinkedIn"
-              >
-                <i class="fab fa-linkedin-in"></i>
-              </a>
-            </div>
-          </div>
 
-          <div class="about-text">
-            <p>
-              I am a dedicated and results-oriented Jr. Software Engineer
-              specializing in PHP and backend development. With a strong
-              foundation in computer science principles and a passion for
-              creating dynamic, user-friendly web applications, I thrive in
-              collaborative environments and am always eager to learn new
-              technologies. My goal is to contribute to meaningful projects
-              while continuously growing my skills as a developer. I believe in
-              writing clean, maintainable code and following best practices to
-              deliver high-quality software solutions.
-            </p>
+            <!-- About Grid -->
+            <div class="about-grid">
 
-            <h3>My Skills</h3>
-            <div class="skills-grid">
-              <div class="skill-tag">PHP</div>
-              <div class="skill-tag">Laravel</div>
-              <div class="skill-tag">MySQL</div>
-              <div class="skill-tag">JavaScript</div>
-              <div class="skill-tag">HTML5</div>
-              <div class="skill-tag">CSS3</div>
-              <div class="skill-tag">Git</div>
-              <div class="skill-tag">OOP</div>
+                <!-- Profile Card -->
+                <aside class="profile-aside" data-animate>
+                    <div class="profile-card glass">
+                        <div class="profile-img-wrap">
+                            <img src="assets/profile.png" alt="Mahrab Hossen" class="profile-img">
+                            <div class="profile-ring"></div>
+                        </div>
+                        <h2 class="profile-name">Mahrab Hossen</h2>
+                        <p class="profile-role">PHP · Laravel · Automation</p>
+                        <div class="profile-location">
+                            <i class="fas fa-map-marker-alt"></i> Uttara, Dhaka, Bangladesh
+                        </div>
+                        <div class="profile-socials">
+                            <a href="https://github.com/Ami-mehrab" target="_blank" rel="noopener" class="social-icon" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                            <a href="https://www.linkedin.com/in/iam-mehrabbappy" target="_blank" rel="noopener" class="social-icon" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="https://www.facebook.com/mehrabhossen.bappy" target="_blank" rel="noopener" class="social-icon" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        </div>
+                        <a href="assets/Resume-mahrab.pdf" download class="btn btn-primary btn-full">
+                            <i class="fas fa-download"></i> Download CV
+                        </a>
+                    </div>
+                </aside>
+
+                <!-- Main Content -->
+                <div class="about-body">
+                    <!-- Bio -->
+                    <div class="about-block glass" data-animate>
+                        <h3 class="block-title"><i class="fas fa-user-astronaut"></i> Who I Am</h3>
+                        <p>
+                            I'm a <strong>Software Engineer</strong> specializing in <strong>PHP &amp; Laravel backend development</strong> and <strong>workflow automation with n8n</strong>. I graduated with a B.Sc. in Computer Science &amp; Engineering from IUBAT and have since been building production-ready applications that solve real problems.
+                        </p>
+                        <p>
+                            My work spans full-stack web applications, AI-powered lead generation tools, SaaS subscription management systems, and automated workflows that connect APIs, databases, and AI models. I believe great software is clean, maintainable, and purposeful — and I obsess over each of those qualities.
+                        </p>
+                        <p>
+                            When I'm not coding, I'm exploring new automation techniques, experimenting with AI integrations (OpenAI, Supabase), and continuously pushing the boundaries of what a backend-first developer can build.
+                        </p>
+                    </div>
+
+                    <!-- Skills -->
+                    <div class="about-block glass" data-animate>
+                        <h3 class="block-title"><i class="fas fa-layer-group"></i> Skills &amp; Technologies</h3>
+                        <div class="skills-categories">
+                            <div class="skill-cat">
+                                <span class="skill-cat-label">Backend</span>
+                                <div class="skill-chips">
+                                    <span class="skill-chip primary">PHP</span>
+                                    <span class="skill-chip primary">Laravel</span>
+                                    <span class="skill-chip primary">OOP</span>
+                                    <span class="skill-chip primary">REST API</span>
+                                </div>
+                            </div>
+                            <div class="skill-cat">
+                                <span class="skill-cat-label">Database</span>
+                                <div class="skill-chips">
+                                    <span class="skill-chip">MySQL</span>
+                                    <span class="skill-chip">PostgreSQL</span>
+                                    <span class="skill-chip">Supabase</span>
+                                </div>
+                            </div>
+                            <div class="skill-cat">
+                                <span class="skill-cat-label">Automation &amp; AI</span>
+                                <div class="skill-chips">
+                                    <span class="skill-chip accent">n8n</span>
+                                    <span class="skill-chip accent">AI Integration</span>
+                                    <!-- <span class="skill-chip accent">OpenAI API</span> -->
+                                </div>
+                            </div>
+                            <div class="skill-cat">
+                                <span class="skill-cat-label">Frontend &amp; Tools</span>
+                                <div class="skill-chips">
+                                    <span class="skill-chip">JavaScript</span>
+                                    <span class="skill-chip">HTML5</span>
+                                    <span class="skill-chip">Tailwind</span>
+                                    <span class="skill-chip">Git</span>
+                                    <span class="skill-chip">Bootstrap</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
+
+            <!-- Education -->
+            <section class="edu-section" data-animate>
+                <div class="section-label">
+                    <span class="page-tag">// education</span>
+                    <h2 class="section-heading">Academic Background</h2>
+                </div>
+                <div class="timeline">
+                    <div class="tl-item glass">
+                        <div class="tl-icon"><i class="fas fa-graduation-cap"></i></div>
+                        <div class="tl-body">
+                            <div class="tl-date">2020 — 2025</div>
+                            <h3 class="tl-title">B.Sc. in Computer Science &amp; Engineering</h3>
+                            <p class="tl-place">IUBAT — International University of Business Agriculture and Technology</p>
+                            <p class="tl-detail">CGPA: <strong>3.20</strong> / 4.00</p>
+                        </div>
+                    </div>
+                    <div class="tl-item glass">
+                        <div class="tl-icon"><i class="fas fa-school"></i></div>
+                        <div class="tl-body">
+                            <div class="tl-date">2019</div>
+                            <h3 class="tl-title">Higher Secondary Certificate (HSC)</h3>
+                            <p class="tl-place">Tongi Govt. College</p>
+                            <p class="tl-detail">Science Group · GPA: <strong>4.00</strong> / 5.00</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
         </div>
-
-        <div class="education-section">
-          <h2 class="section-title">Education</h2>
-          <div class="timeline">
-            <div class="timeline-item">
-              <div class="timeline-content">
-                <h3>B.Sc. in Computer Science & Engineering</h3>
-                <p class="institution">
-                  IUBAT—International University of Business Agriculture and
-                  Technology
-                </p>
-                <p class="details">CGPA: 3.20 out of 4.00</p>
-                <span class="timeline-date">2020-2025</span>
-              </div>
-            </div>
-            <div class="timeline-item">
-              <div class="timeline-content">
-                <h3>Higher Secondary Certificate (HSC)</h3>
-                <p class="institution">Tongi Govt. College</p>
-                <p class="details">Group: Science | GPA: 4.00 out of 5.00</p>
-                <span class="timeline-date">2019</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
     </main>
 
     <footer>
-      <p>&copy; 2025 Mahrab Hossen. All Rights Reserved.</p>
+        <div class="footer-inner">
+            <p class="footer-logo">Mahrab Hossen</p>
+            <p class="footer-copy">&copy; 2025 Mahrab Hossen. All rights reserved.</p>
+        </div>
     </footer>
+
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
     <script src="js/script.js"></script>
-  </body>
+</body>
 </html>

@@ -1,183 +1,224 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio | Mahrab Hossen</title>
-    <link
-      rel="icon"
-      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%231E3D58'/><text x='50' y='70' font-size='60' text-anchor='middle' fill='%23D4AF37' 
-        font-family='Arial, sans-serif' font-weight='bold'>M</text></svg>"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-    />
-    <link rel="stylesheet" href="css/style.css" />
-  </head>
-  <body>
-    <header>
-      <nav>
-        <a href="index.html" class="logo">Mahrab Hossen</a>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='18' fill='%23111'/><text x='50' y='68' font-size='58' text-anchor='middle' fill='%23a78bfa' font-family='Georgia,serif' font-weight='bold'>M</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="bg-grid"></div>
+    <div class="bg-orb orb-1"></div>
+    <div class="bg-orb orb-2"></div>
 
-        <div class="nav-links" id="navLinks">
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="portfolio.html">Portfolio</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
-          <button class="theme-toggle" id="themeToggle">
-            <i class="fas fa-moon"></i>
-          </button>
-        </div>
-
-        <div class="hamburger" id="hamburger">
-          <div></div>
-          <div></div>
-          <div></div>
-        </div>
-      </nav>
+    <header id="header">
+        <nav class="nav-container">
+            <a href="index.html" class="logo"><span class="logo-name">Mahrab Hossen</span><span class="logo-tag">&lt;dev/&gt;</span></a>
+            <div class="hamburger" id="hamburger">
+                <span></span><span></span><span></span>
+            </div>
+            <div class="nav-links" id="navLinks">
+                <ul>
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="portfolio.html" class="nav-link active">Portfolio</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+        </nav>
     </header>
 
-    <main>
-      <div class="container">
-        <h1 class="section-title">My Projects</h1>
-        <p class="section-subtitle">
-          Explore some of my recent work and side projects showcasing my skills
-          in web development
-        </p>
+    <main class="page-main">
+        <div class="container">
 
-        <div class="portfolio-grid">
-          <!-- Project 1 -->
-          <div class="project-card">
-            <div class="project-image">
-              <img src="assets/BNFWA.png" alt="BNFW" />
+            <div class="page-header" data-animate>
+                <span class="page-tag">// portfolio</span>
+                <h1 class="page-title">Things I've <em>built</em></h1>
+                <p class="page-subtitle">Real-world projects using PHP, Laravel, and n8n automation</p>
             </div>
-            <div class="project-info">
-              <h3>বাংলাদেশ নৌবাহিনী পরিবার কল্যাণ সংঘ</h3>
-              <p>
-                বাংলাদেশ নৌবাহিনী পরিবার কল্যাণ সংঘ (Bangladesh Navy Welfare
-                Association) বাংলাদেশ নৌবাহিনীর সদস্যদের পরিবারদের জন্য বিভিন্ন
-                ধরনের কল্যাণমূলক কার্যক্রম পরিচালনা করে থাকে। এটি সদস্যদের
-                সামাজিক ও আর্থিক সুরক্ষা নিশ্চিত করতে সহায়ক সুবিধা প্রদান করে,
-                যেমন শিক্ষা, স্বাস্থ্যসেবা, এবং অন্যান্য জীবনমান উন্নত করার জন্য
-                নানা ধরণের সহায়তা।
-              </p>
-              <div class="project-tags">
-                <span>PHP</span>
-                <span>Laravel</span>
-                <span>JavaScript</span>
-                <span>Css</span>
-                <span>MySQL</span>
-              </div>
-              <div class="project-links">
-                <a href="https://bnfwa.navy.mil.bd/" class="btn-project btn-primary">
-                                <i class="fas fa-external-link-alt"></i> Live
+
+            <div class="portfolio-grid">
+
+                <!-- Project 1: BNFWA -->
+                <article class="project-card glass" data-animate>
+                    <div class="project-img-wrap">
+                        <img src="assets/BNFWA.png" alt="বাংলাদেশ নৌবাহিনী পরিবার কল্যাণ সংঘ" class="project-img">
+                        <div class="project-overlay">
+                            <a href="https://bnfwa.navy.mil.bd/" target="_blank" rel="noopener" class="overlay-btn">
+                                <i class="fas fa-external-link-alt"></i> Visit Live
                             </a>
-            
-              </div>
-            </div>
-          </div>
+                        </div>
+                    </div>
+                    <div class="project-body">
+                        <div class="project-meta">
+                            <span class="project-type">Web Application</span>
+                            <span class="project-status live">Live</span>
+                        </div>
+                        <h3 class="project-title">বাংলাদেশ নৌবাহিনী পরিবার কল্যাণ সংঘ</h3>
+                        <p class="project-desc">Official welfare platform for Bangladesh Navy families — covering education, healthcare, and financial support management.</p>
+                        <div class="project-tags">
+                            <span>PHP</span><span>Laravel</span><span>JavaScript</span><span>CSS</span><span>MySQL</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://bnfwa.navy.mil.bd/" target="_blank" rel="noopener" class="btn-sm btn-primary">
+                                <i class="fas fa-external-link-alt"></i> Live Site
+                            </a>
+                        </div>
+                    </div>
+                </article>
 
-          <!-- Project 2 -->
-          <div class="project-card">
-            <div class="project-image">
-              <img src="assets/sms1.png" alt="School Management System" />
-            </div>
-            <div class="project-info">
-              <h3>School Management System</h3>
-              <p>
-                A comprehensive system to manage student data, attendance,
-                grades, and communication between teachers and parents.
-              </p>
-              <div class="project-tags">
-                <span>PHP</span>
-                <span>MySQL</span>
-                <span>Bootstrap</span>
-              </div>
-              <div class="project-links">
-                <!-- <a href="#" class="btn-project btn-primary">
-                                <i class="fas fa-external-link-alt"></i> Live Demo
-                            </a> -->
-                <a
-                  href="https://github.com/Likhon1998/school-management-system"
-                  class="btn-project btn-secondary"
-                >
-                  <i class="fab fa-github"></i> Code
-                </a>
-              </div>
-            </div>
-          </div>
+                <!-- Project 2: Lead Gen AI -->
+                <article class="project-card glass" data-animate>
+                    <div class="project-img-wrap project-img-slider" id="slider-2">
+                        <div class="slider-images">
+                            <img src="assets/AI1.png" alt="Lead Generation AI - 1" class="slider-img active">
+                            <img src="assets/AI.png" alt="Lead Generation AI - 2" class="slider-img">
+                        </div>
+                        <button class="sl-btn sl-prev" aria-label="Prev"><i class="fas fa-chevron-left"></i></button>
+                        <button class="sl-btn sl-next" aria-label="Next"><i class="fas fa-chevron-right"></i></button>
+                        <div class="sl-dots">
+                            <span class="sl-dot active"></span>
+                            <span class="sl-dot"></span>
+                        </div>
+                        <div class="project-overlay">
+                            <a href="https://github.com/Ami-mehrab/eGSales-AI-app" target="_blank" rel="noopener" class="overlay-btn">
+                                <i class="fab fa-github"></i> View Code
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-body">
+                        <div class="project-meta">
+                            <span class="project-type">AI · Automation</span>
+                            <span class="project-status code">Open Source</span>
+                        </div>
+                        <h3 class="project-title">Lead Generation AI</h3>
+                        <p class="project-desc">AI-powered lead generation tool integrated with Laravel. Uses n8n workflows and AI models to identify and nurture potential customers automatically.</p>
+                        <div class="project-tags">
+                            <span>Laravel</span><span>n8n</span><span>Automation</span><span>PostgreSQL</span><span>Supabase</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Ami-mehrab/eGSales-AI-app" target="_blank" rel="noopener" class="btn-sm btn-ghost">
+                                <i class="fab fa-github"></i> Code
+                            </a>
+                        </div>
+                    </div>
+                </article>
 
-          <!-- Project 3 -->
-          <div class="project-card">
-            <div class="project-image">
-              <img src="assets/Job-portal.png" alt="Job Portal System" />
-            </div>
-            <div class="project-info">
-              <h3>Job Portal System</h3>
-              <p>
-                A platform connecting job seekers with employers, featuring
-                resume uploads, job filtering, and application tracking.
-              </p>
-              <div class="project-tags">
-                <span>Laravel</span>
-                <span>PHP</span>
-                <span>Javascript</span>
-                <span>CSS</span>
-              </div>
-              <div class="project-links">
-                <!-- <a href="#" class="btn-project btn-primary">
-                                <i class="fas fa-external-link-alt"></i> Live Demo
-                            </a> -->
-                <a
-                  href="https://github.com/Ami-mehrab/laravel_roles_permission"
-                  class="btn-project btn-secondary"
-                >
-                  <i class="fab fa-github"></i> Code
-                </a>
-              </div>
-            </div>
-          </div>
+                <!-- Project 3: SaaS Subscription -->
+                <article class="project-card glass" data-animate>
+                    <div class="project-img-wrap project-img-slider" id="slider-5">
+                        <div class="slider-images">
+                            <img src="assets/saas-home.png" alt="SaaS Home" class="slider-img active">
+                            <img src="assets/saas-dashboard.png" alt="SaaS Dashboard" class="slider-img">
+                        </div>
+                        <button class="sl-btn sl-prev" aria-label="Prev"><i class="fas fa-chevron-left"></i></button>
+                        <button class="sl-btn sl-next" aria-label="Next"><i class="fas fa-chevron-right"></i></button>
+                        <div class="sl-dots">
+                            <span class="sl-dot active"></span>
+                            <span class="sl-dot"></span>
+                        </div>
+                        <div class="project-overlay">
+                            <a href="https://github.com/Ami-mehrab/Saas-subscription_management_system" target="_blank" rel="noopener" class="overlay-btn">
+                                <i class="fab fa-github"></i> View Code
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-body">
+                        <div class="project-meta">
+                            <span class="project-type">SaaS Platform</span>
+                            <span class="project-status code">Open Source</span>
+                        </div>
+                        <h3 class="project-title">SaaS Subscription Management</h3>
+                        <p class="project-desc">Full-featured SaaS platform with automated billing cycles, user subscription handling, plan management, and payment gateway integration.</p>
+                        <div class="project-tags">
+                            <span>PHP</span><span>Laravel</span><span>JavaScript</span><span>Payment Gateway</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Ami-mehrab/Saas-subscription_management_system" target="_blank" rel="noopener" class="btn-sm btn-ghost">
+                                <i class="fab fa-github"></i> Code
+                            </a>
+                        </div>
+                    </div>
+                </article>
 
-          <!-- Project 4 -->
-          <div class="project-card">
-            <div class="project-image">
-              <img src="assets/ecommerce.png" alt="Ecommerce Development" />
+                <!-- Project 4: Job Portal -->
+                <article class="project-card glass" data-animate>
+                    <div class="project-img-wrap">
+                        <img src="assets/Job-portal.png" alt="Job Portal System" class="project-img">
+                        <div class="project-overlay">
+                            <a href="https://github.com/Ami-mehrab/laravel_roles_permission" target="_blank" rel="noopener" class="overlay-btn">
+                                <i class="fab fa-github"></i> View Code
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-body">
+                        <div class="project-meta">
+                            <span class="project-type">Web Application</span>
+                            <span class="project-status code">Open Source</span>
+                        </div>
+                        <h3 class="project-title">Job Portal System</h3>
+                        <p class="project-desc">A full-stack job board connecting job seekers with employers — resume uploads, smart job filtering, role-based access, and application tracking.</p>
+                        <div class="project-tags">
+                            <span>Laravel</span><span>PHP</span><span>JavaScript</span><span>CSS</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Ami-mehrab/laravel_roles_permission" target="_blank" rel="noopener" class="btn-sm btn-ghost">
+                                <i class="fab fa-github"></i> Code
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 5: School Management -->
+                <article class="project-card glass" data-animate>
+                    <div class="project-img-wrap">
+                        <img src="assets/sms1.png" alt="School Management System" class="project-img">
+                        <div class="project-overlay">
+                            <a href="https://github.com/Likhon1998/school-management-system" target="_blank" rel="noopener" class="overlay-btn">
+                                <i class="fab fa-github"></i> View Code
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-body">
+                        <div class="project-meta">
+                            <span class="project-type">Management System</span>
+                            <span class="project-status code">Open Source</span>
+                        </div>
+                        <h3 class="project-title">School Management System</h3>
+                        <p class="project-desc">Comprehensive platform to manage student records, attendance, grades, and teacher-parent communication in a single admin dashboard.</p>
+                        <div class="project-tags">
+                            <span>PHP</span><span>MySQL</span><span>Bootstrap</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Likhon1998/school-management-system" target="_blank" rel="noopener" class="btn-sm btn-ghost">
+                                <i class="fab fa-github"></i> Code
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
             </div>
-            <div class="project-info">
-              <h3>Development of Ecommerce</h3>
-              <p>
-                A full-featured online store with product catalogs, shopping
-                cart, secure payment gateway integration, and an admin
-                dashboard.
-              </p>
-              <div class="project-tags">
-                <span>PHP</span>
-                <span>Laravel</span>
-                <span>Javascript</span>
-              </div>
-              <div class="project-links">
-                <!-- <a href="#" class="btn-project btn-primary">
-                                <i class="fas fa-external-link-alt"></i> Live Demo
-                            </a> -->
-                <a
-                  href="https://github.com/Ami-mehrab/Learning-management-system-"
-                  class="btn-project btn-secondary"
-                >
-                  <i class="fab fa-github"></i> Code
-                </a>
-              </div>
-            </div>
-          </div>
         </div>
-      </div>
     </main>
 
     <footer>
-      <p>&copy; 2025 Mahrab Hossen. All Rights Reserved.</p>
+        <div class="footer-inner">
+            <p class="footer-logo">Mahrab Hossen</p>
+            <p class="footer-copy">&copy; 2025 Mahrab Hossen. All rights reserved.</p>
+        </div>
     </footer>
+
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
     <script src="js/script.js"></script>
-  </body>
+</body>
 </html>

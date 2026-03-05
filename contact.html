@@ -4,102 +4,152 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact | Mahrab Hossen</title>
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%231E3D58'/><text x='50' y='70' font-size='60' text-anchor='middle' fill='%23D4AF37'
-         font-family='Arial, sans-serif' font-weight='bold'>M</text></svg>">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='18' fill='%23111'/><text x='50' y='68' font-size='58' text-anchor='middle' fill='%23a78bfa' font-family='Georgia,serif' font-weight='bold'>M</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<header>
-    <nav>
-        <a href="index.html" class="logo">Mahrab Hossen</a>
 
-        <div class="nav-links" id="navLinks">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="portfolio.html">Portfolio</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-            <button class="theme-toggle" id="themeToggle">
-                <i class="fas fa-moon"></i>
-            </button>
-        </div>
+    <div class="bg-grid"></div>
+    <div class="bg-orb orb-1"></div>
+    <div class="bg-orb orb-2"></div>
 
-        <div class="hamburger" id="hamburger">
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
-        
-    </nav>
-</header>
+    <header id="header">
+        <nav class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-name">Mahrab Hossen</span>
+                <span class="logo-tag">&lt;dev/&gt;</span>
+            </a>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="nav-links" id="navLinks">
+                <ul>
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+                    <li><a href="contact.html" class="nav-link active">Contact</a></li>
+                </ul>
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
 
-    <main>
+    <main class="page-main">
         <div class="container">
-            <h1 class="section-title">Get In Touch</h1>
-            <p class="section-subtitle">
-                I'm currently available for freelance/remote work or full-time opportunities. If you have a project in mind or just want to say hello, feel free to reach out.
-            </p>
 
-            <div class="contact-container">
-                <div class="contact-info">
-                    <div class="info-card">
-                        <div class="info-card-header"><div class="info-icon"><i class="fas fa-envelope"></i></div><h3>Email</h3></div>
-                        <p><a href="mailto:mahrabbappy33@gmail.com">mahrabbappy33@gmail.com</a></p>
+            <div class="page-header" data-animate>
+                <span class="page-tag">// contact</span>
+                <h1 class="page-title">Let's <em>work together</em></h1>
+                <p class="page-subtitle">Available for freelance, remote work, or full-time opportunities. Say hello!</p>
+            </div>
+
+            <div class="contact-grid">
+
+                <div class="contact-info" data-animate>
+
+                    <div class="info-card glass">
+                        <div class="info-icon"><i class="fas fa-envelope"></i></div>
+                        <div class="info-body">
+                            <h4>Email</h4>
+                            <a href="mailto:mahrabbappy33@gmail.com">mahrabbappy33@gmail.com</a>
+                        </div>
                     </div>
-                    <div class="info-card">
-                        <div class="info-card-header"><div class="info-icon"><i class="fas fa-phone"></i></div><h3>Phone</h3></div>
-                        <p><a href="tel:+8801950047492">+880 1950047492</a></p>
+
+                    <div class="info-card glass">
+                        <div class="info-icon"><i class="fas fa-phone"></i></div>
+                        <div class="info-body">
+                            <h4>Phone</h4>
+                            <a href="tel:+8801950047492">+880 1950 047492</a>
+                        </div>
                     </div>
-                    <div class="info-card">
-                        <div class="info-card-header"><div class="info-icon"><i class="fas fa-map-marker-alt"></i></div><h3>Location</h3></div>
-                        <p>Uttara, Dhaka, Bangladesh</p>
+
+                    <div class="info-card glass">
+                        <div class="info-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <div class="info-body">
+                            <h4>Location</h4>
+                            <span>Uttara, Dhaka, Bangladesh</span>
+                        </div>
                     </div>
-                    <div class="info-card">
-                        <div class="info-card-header"><div class="info-icon"><i class="fas fa-share-alt"></i></div><h3>Social Media</h3></div>
-                        <p>
-                            <a href="https://www.linkedin.com/in/iam-mehrabbappy" target="_blank">LinkedIn</a> • 
-                            <a href="https://github.com/Ami-mehrab" target="_blank">GitHub</a> • 
-                            <a href="https://www.facebook.com/mehrabhossen.bappy" target="_blank">Facebook</a>
-                        </p>
+
+                    <div class="info-card glass">
+                        <div class="info-icon"><i class="fas fa-share-alt"></i></div>
+                        <div class="info-body">
+                            <h4>Social</h4>
+                            <div class="info-socials">
+                                <a href="https://www.linkedin.com/in/iam-mehrabbappy" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                                &nbsp;&middot;&nbsp;
+                                <a href="https://github.com/Ami-mehrab" target="_blank" rel="noopener noreferrer">GitHub</a>
+                                &nbsp;&middot;&nbsp;
+                                <a href="https://www.facebook.com/mehrabhossen.bappy" target="_blank" rel="noopener noreferrer">Facebook</a>
+                            </div>
+                        </div>
                     </div>
+
+                    <div class="avail-card glass">
+                        <div class="avail-dot"></div>
+                        <div>
+                            <p class="avail-title">Currently Available</p>
+                            <p class="avail-sub">Open to freelance &amp; full-time roles</p>
+                        </div>
+                    </div>
+
                 </div>
 
-                <div class="contact-form-wrapper">
-                    <h3>Send Me a Message</h3>
-                    <form id="contactForm">
+                <div class="contact-form-wrap glass" data-animate>
+                    <h3 class="form-title">Send a Message</h3>
+                    <form id="contactForm" novalidate>
                         <input type="hidden" name="access_key" value="04963bca-4119-4804-902e-e9c675ad7d20">
-                        <input type="hidden" name="subject" value="New Message from your Portfolio!">
-                        
-                        <div class="form-group">
-                            <label for="name">Your Name</label>
-                            <input type="text" id="name" name="name" required placeholder="John Doe">
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Your Email</label>
-                            <input type="email" id="email" name="email" required placeholder="john@example.com">
+                        <input type="hidden" name="from_name" value="Portfolio Contact Form">
+                        <input type="checkbox" name="botcheck" style="display:none;">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Your Name</label>
+                                <input type="text" id="name" name="name" required placeholder="John Doe">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Your Email</label>
+                                <input type="email" id="email" name="email" required placeholder="john@example.com">
+                            </div>
                         </div>
                         <div class="form-group">
                             <label for="subject">Subject</label>
-                            <input type="text" id="subject" name="subject" required placeholder="Project Inquiry">
+                            <input type="text" id="subject" name="subject" required placeholder="Project Inquiry / Collaboration">
                         </div>
                         <div class="form-group">
-                            <label for="message">Your Message</label>
-                            <textarea id="message" name="message" required placeholder="Tell me about your project..."></textarea>
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" required placeholder="Tell me about your project or idea..."></textarea>
                         </div>
-                        <button type="submit" class="submit-btn" id="submitBtn">
-                            <i class="fas fa-paper-plane"></i> Send Message
+                        <button type="submit" class="btn btn-primary btn-full" id="submitBtn">
+                            <i class="fas fa-paper-plane"></i>
+                            <span>Send Message</span>
                         </button>
                     </form>
                 </div>
+
             </div>
+
         </div>
     </main>
 
     <footer>
-        <p>&copy; 2025 Mahrab Hossen. All Rights Reserved.</p>
+        <div class="footer-inner">
+            <p class="footer-logo">Mahrab Hossen</p>
+            <p class="footer-copy">&copy; 2025 Mahrab Hossen. All rights reserved.</p>
+        </div>
     </footer>
+
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
     <script src="js/script.js"></script>
+
 </body>
 </html>
