@@ -1,117 +1,1011 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mahrab Hossen — PHP·Laravel·Automation Developer</title>
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='18' fill='%23111'/><text x='50' y='68' font-size='58' text-anchor='middle' fill='%23a78bfa' font-family='Georgia,serif' font-weight='bold'>M</text></svg>">
+    <title>Mahrab Hossen — Software Engineer</title>
+    <meta name="description"
+        content="Portfolio of Mahrab Hossen, Full-Stack Software Engineer at eGeneration PLC specializing in PHP, Laravel, MySQL, Gemini Live API, and n8n workflow automation.">
+
+    <!-- Favicon -->
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23ea580c'/><text x='50' y='68' font-size='56' text-anchor='middle' fill='%23ffffff' font-family='sans-serif' font-weight='bold'>M</text></svg>">
+
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&family=DM+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-    <!-- Animated BG -->
-    <div class="bg-grid"></div>
-    <div class="bg-orb orb-1"></div>
-    <div class="bg-orb orb-2"></div>
-    <div class="bg-orb orb-3"></div>
 
-    <header id="header">
-        <nav class="nav-container">
-            <a href="index.html" class="logo"><span class="logo-name">Mahrab Hossen</span><span class="logo-tag">&lt;dev/&gt;</span></a>
-            <div class="hamburger" id="hamburger">
-                <span></span><span></span><span></span>
+<body>
+
+    <!-- ============================================================
+         HEADER & NAVIGATION
+         ============================================================ -->
+    <header id="header" class="site-header">
+        <div class="nav-container">
+            <a href="#hero" class="brand-logo">
+                <span class="logo-circle">M</span>
+                <span class="logo-text">Mahrab<span class="logo-accent">.</span></span>
+            </a>
+
+            <div class="hamburger" id="hamburger" aria-label="Toggle navigation" role="button" tabindex="0">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
-            <div class="nav-links" id="navLinks">
-                <ul>
-                    <li><a href="index.html" class="nav-link active">Home</a></li>
-                    <li><a href="about.html" class="nav-link">About</a></li>
-                    <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
-                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+
+            <nav class="nav-menu" id="navMenu">
+                <ul class="nav-list">
+                    <li><a href="#hero" class="nav-link active">Home</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#skills" class="nav-link">Skills</a></li>
+                    <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+                    <li><a href="#services" class="nav-link">Services</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
                 </ul>
-                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
-                    <i class="fas fa-moon"></i>
-                </button>
-            </div>
-        </nav>
+                <div class="nav-actions">
+                    <a href="#contact" class="btn btn-primary btn-nav">Hire Me</a>
+                </div>
+            </nav>
+        </div>
     </header>
 
-    <main class="hero">
-        <div class="hero-inner">
-            <!-- Left: Text -->
-            <div class="hero-text" data-animate>
-                <div class="hero-badge">
-                    <span class="badge-dot"></span>
-                    Available for work
-                </div>
-                <h1 class="hero-title">
-                    Hi, I'm<br>
-                    <span class="name-block">
-                        <span class="typing-text" id="typingText"></span><span class="cursor">|</span>
-                    </span>
-                </h1>
-                <div class="hero-roles">
-                    <span class="role-chip">PHP &amp; Laravel</span>
-                    <span class="role-sep">·</span>
-                    <span class="role-chip">Automation (n8n)</span>
-                    <span class="role-sep">·</span>
-                    <span class="role-chip">Backend Dev</span>
-                </div>
-                <p class="hero-desc">
-                    I craft <em>robust web applications</em> with PHP &amp; Laravel, and build smart automation pipelines using <em>n8n</em>. From AI-powered lead generation tools to SaaS subscription systems — I turn ideas into production-ready software.
-                </p>
-                <div class="hero-cta">
-                    <a href="portfolio.html" class="btn btn-primary">
-                        <span>View Projects</span>
-                        <i class="fas fa-arrow-right"></i>
-                    </a>
-                    <a href="assets/Resume-mahrab.pdf" class="btn btn-ghost" download>
-                        <i class="fas fa-download"></i>
-                        <span>Resume</span>
-                    </a>
-                </div>
-                <!-- <div class="hero-socials">
-                    <a href="https://github.com/Ami-mehrab" target="_blank" rel="noopener" class="social-icon" aria-label="GitHub">
-                        <i class="fab fa-github"></i>
-                    </a>
-                    <a href="https://www.linkedin.com/in/iam-mehrabbappy" target="_blank" rel="noopener" class="social-icon" aria-label="LinkedIn">
-                        <i class="fab fa-linkedin-in"></i>
-                    </a>
-                    <a href="https://www.facebook.com/mehrabhossen.bappy" target="_blank" rel="noopener" class="social-icon" aria-label="Facebook">
-                        <i class="fab fa-facebook-f"></i>
-                    </a>
-                </div> -->
-            </div>
+    <main>
+        <!-- ============================================================
+             HERO SECTION
+             ============================================================ -->
+        <section id="hero" class="hero-section">
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <div class="hero-badge">
+                        <span class="badge-dot"></span>
+                        <span>Open to Opportunities</span>
+                    </div>
 
-            <!-- Right: Photo -->
-            <div class="hero-visual" data-animate-delay>
-                <div class="hero-photo-wrap">
-                    <img src="assets/mahrab-coding1.jpg" alt="Mahrab Hossen coding" class="hero-photo">
-                  
-                  
+                    <h1 class="hero-title">
+                        Mahrab Hossen<br>
+                        <span class="hero-title-highlight">Software Engineer</span>
+                    </h1>
+
+                    <p class="hero-desc">
+                        Full-Stack Software Engineer building and maintaining enterprise web applications with PHP,
+                        Laravel, and MySQL. Experienced in AI-integrated platforms (Gemini Live API), n8n workflow
+                        automation, and scalable RESTful architectures.
+                    </p>
+
+                    <div class="hero-buttons">
+                        <a href="assets/Mahrab_Hossen_CV.pdf" class="btn btn-primary" download="Mahrab_Hossen_CV.pdf">
+                            <i class="fas fa-file-download"></i>
+                            <span>Download Resume</span>
+                        </a>
+                        <a href="#portfolio" class="btn btn-outline">
+                            <i class="fas fa-layer-group"></i>
+                            <span>My Portfolio</span>
+                        </a>
+                    </div>
+
+                    <!-- Metrics / Stats Bar -->
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <span class="stat-number" data-target="1">1+</span>
+                            <span class="stat-label">Years Experience</span>
+                        </div>
+                        <div class="stat-divider"></div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-target="6">6+</span>
+                            <span class="stat-label">Production Projects</span>
+                        </div>
+                        <div class="stat-divider"></div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-target="100">100%</span>
+                            <span class="stat-label">Code Reliability</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Visual: Developer Image with Natural Landscape Aspect Ratio & Organic Backdrop -->
+                <div class="hero-visual">
+                    <div class="hero-shape-backdrop"></div>
+                    <div class="hero-image-wrapper">
+                        <img src="assets/hero-image.jpg" alt="Mahrab Hossen — Software Engineer at Work"
+                            class="hero-img">
+                    </div>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <!-- Scroll indicator -->
-        <div class="scroll-hint">
-            <div class="scroll-line"></div>
-            <span>scroll</span>
-        </div>
+        <!-- ============================================================
+             ABOUT SECTION
+             ============================================================ -->
+        <section id="about" class="about-section">
+            <div class="container">
+                <div class="section-title-wrap">
+                    <span class="section-badge">About</span>
+                    <h2 class="section-title">Who I Am</h2>
+                    <div class="title-underline"></div>
+                    <p class="section-subtitle">
+                        Passionate about crafting dependable backend systems, intuitive user experiences, and automated
+                        workflows.
+                    </p>
+                </div>
+
+                <div class="about-grid">
+                    <!-- Left Photo Frame (Formal Photo) -->
+                    <div class="about-photo-col">
+                        <div class="about-photo-frame">
+                            <img src="assets/Formal-mahrab.png" alt="Mahrab Hossen — Formal Portrait" class="about-img">
+                            <div class="about-photo-badge">
+                                <i class="fas fa-briefcase"></i>
+                                <span>Software Engineer</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Bio & Details -->
+                    <div class="about-info-col">
+                        <div class="about-tag">About Me</div>
+                        <h3 class="about-role">Full-Stack Software Engineer</h3>
+                        <p class="about-bio">
+                            I am a <strong>Software Engineer at eGeneration PLC</strong> with professional experience
+                            building and maintaining web-based business applications using <strong>PHP, Laravel, and
+                                MySQL</strong>, including ERP, SaaS, and role-based enterprise portals. I graduated with
+                            a <strong>B.Sc. in Computer Science &amp; Engineering</strong> from IUBAT .
+                        </p>
+                        <p class="about-bio-sub">
+                            My core expertise spans relational database design and query optimization, RESTful and
+                            third-party API integration, n8n workflow automation, and building AI-integrated solutions —
+                            including speech-to-speech AI evaluation platforms powered by the <strong>Gemini Live
+                                API</strong>.
+                        </p>
+
+                        <!-- Key-Value Details Grid Table -->
+                        <div class="about-details-table">
+                            <div class="detail-row">
+                                <div class="detail-col">
+                                    <span class="detail-label">Name:</span>
+                                    <span class="detail-value">Mahrab Hossen</span>
+                                </div>
+                                <div class="detail-col">
+                                    <span class="detail-label">Current Role:</span>
+                                    <span class="detail-value">Software Engineer @ eGeneration PLC</span>
+                                </div>
+                            </div>
+                            <div class="detail-row">
+                                <div class="detail-col">
+                                    <span class="detail-label">Education:</span>
+                                    <span class="detail-value">B.Sc. in CSE (IUBAT) · CGPA: 3.20</span>
+                                </div>
+                                <div class="detail-col">
+                                    <span class="detail-label">Experience:</span>
+                                    <span class="detail-value">1+ Year Professional</span>
+                                </div>
+                            </div>
+                            <div class="detail-row">
+                                <div class="detail-col">
+                                    <span class="detail-label">Phone:</span>
+                                    <a href="tel:+8801950047492" class="detail-value link-value">+880 1950 047492</a>
+                                </div>
+                                <div class="detail-col">
+                                    <span class="detail-label">Email:</span>
+                                    <a href="mailto:mahrabbappy33@gmail.com"
+                                        class="detail-value link-value">mahrabbappy33@gmail.com</a>
+                                </div>
+                            </div>
+                            <div class="detail-row">
+                                <div class="detail-col">
+                                    <span class="detail-label">Location:</span>
+                                    <span class="detail-value">Uttara, Dhaka, Bangladesh</span>
+                                </div>
+                                <div class="detail-col">
+                                    <span class="detail-label">Status:</span>
+                                    <span class="detail-value status-available"><i class="fas fa-circle"></i> Open to
+                                        Opportunities</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Actions -->
+                        <div class="about-actions">
+                            <a href="https://www.linkedin.com/in/iam-mehrabbappy" target="_blank" rel="noopener"
+                                class="btn btn-primary">
+                                <i class="fab fa-linkedin-in"></i>
+                                <span>Public Profile</span>
+                            </a>
+                            <a href="#contact" class="btn btn-outline">
+                                <i class="fas fa-paper-plane"></i>
+                                <span>Get in Touch</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================================
+             SKILLS SECTION (MATCHING 2ND SCREENSHOT EXACTLY!)
+             ============================================================ -->
+        <section id="skills" class="skills-section">
+            <div class="container">
+                <div class="section-title-wrap">
+                    <span class="section-badge">Skills</span>
+                    <h2 class="section-title">Technical Expertise</h2>
+                    <div class="title-underline"></div>
+                    <p class="section-subtitle">
+                        Technologies and tools I specialize in to build reliable, high-performance web solutions.
+                    </p>
+                </div>
+
+                <!-- 8 Cards Grid matching CV Skills -->
+                <div class="skills-grid">
+                    <!-- 1. PHP -->
+                    <div class="skill-card">
+                        <div class="skill-card-top">
+                            <h3 class="skill-title">PHP (Core & OOP)</h3>
+                            <p class="skill-desc">Building powerful, secure backends with clean PHP architecture and
+                                object-oriented principles.</p>
+                        </div>
+                        <div class="skill-card-bottom">
+                            <div class="skill-percent-wrap">
+                                <span class="skill-percent">95%</span>
+                            </div>
+                            <div class="skill-progress-track">
+                                <div class="skill-progress-bar" data-width="95"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 2. Laravel -->
+                    <div class="skill-card">
+                        <div class="skill-card-top">
+                            <h3 class="skill-title">Laravel Framework</h3>
+                            <p class="skill-desc">Developing secure, scalable enterprise web applications using modern
+                                Laravel best practices.</p>
+                        </div>
+                        <div class="skill-card-bottom">
+                            <div class="skill-percent-wrap">
+                                <span class="skill-percent">92%</span>
+                            </div>
+                            <div class="skill-progress-track">
+                                <div class="skill-progress-bar" data-width="92"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 3. AI & Automation -->
+                    <div class="skill-card">
+                        <div class="skill-card-top">
+                            <h3 class="skill-title">AI & Automation</h3>
+                            <p class="skill-desc">Building intelligent workflows with n8n automation and Gemini Live API
+                                voice systems.</p>
+                        </div>
+                        <div class="skill-card-bottom">
+                            <div class="skill-percent-wrap">
+                                <span class="skill-percent">90%</span>
+                            </div>
+                            <div class="skill-progress-track">
+                                <div class="skill-progress-bar" data-width="90"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 4. MySQL & Database Management -->
+                    <div class="skill-card">
+                        <div class="skill-card-top">
+                            <h3 class="skill-title">MySQL & Database</h3>
+                            <p class="skill-desc">Expert in relational database design, query optimization, and managing
+                                complex data architectures.</p>
+                        </div>
+                        <div class="skill-card-bottom">
+                            <div class="skill-percent-wrap">
+                                <span class="skill-percent">92%</span>
+                            </div>
+                            <div class="skill-progress-track">
+                                <div class="skill-progress-bar" data-width="92"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 5. React / Vue.js & Inertia.js -->
+                    <div class="skill-card">
+                        <div class="skill-card-top">
+                            <h3 class="skill-title">React / Vue.js & Inertia</h3>
+                            <p class="skill-desc">Creating reactive SPAs with React and Vue.js, seamlessly integrated
+                                via Inertia.js.</p>
+                        </div>
+                        <div class="skill-card-bottom">
+                            <div class="skill-percent-wrap">
+                                <span class="skill-percent">88%</span>
+                            </div>
+                            <div class="skill-progress-track">
+                                <div class="skill-progress-bar" data-width="88"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 6. RESTful API Integration -->
+                    <div class="skill-card">
+                        <div class="skill-card-top">
+                            <h3 class="skill-title">RESTful API Integration</h3>
+                            <p class="skill-desc">Designing and consuming robust REST APIs with third-party service
+                                integrations and webhooks.</p>
+                        </div>
+                        <div class="skill-card-bottom">
+                            <div class="skill-percent-wrap">
+                                <span class="skill-percent">94%</span>
+                            </div>
+                            <div class="skill-progress-track">
+                                <div class="skill-progress-bar" data-width="94"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 7. JavaScript & TypeScript -->
+                    <div class="skill-card">
+                        <div class="skill-card-top">
+                            <h3 class="skill-title">JavaScript & TypeScript</h3>
+                            <p class="skill-desc">Bringing interactivity with modern ES6+ JavaScript and type-safe
+                                TypeScript development.</p>
+                        </div>
+                        <div class="skill-card-bottom">
+                            <div class="skill-percent-wrap">
+                                <span class="skill-percent">90%</span>
+                            </div>
+                            <div class="skill-progress-track">
+                                <div class="skill-progress-bar" data-width="90"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 8. AngularJS & Frontend UI -->
+                    <div class="skill-card">
+                        <div class="skill-card-top">
+                            <h3 class="skill-title">AngularJS & Frontend UI</h3>
+                            <p class="skill-desc">Building dynamic, component-driven interfaces with AngularJS and
+                                modern frontend tooling.</p>
+                        </div>
+                        <div class="skill-card-bottom">
+                            <div class="skill-percent-wrap">
+                                <span class="skill-percent">85%</span>
+                            </div>
+                            <div class="skill-progress-track">
+                                <div class="skill-progress-bar" data-width="85"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================================
+             RESUME SECTION
+             ============================================================ -->
+        <section id="resume" class="resume-section">
+            <div class="container">
+                <div class="section-title-wrap">
+                    <!-- <span class="section-badge">Resume</span> -->
+                    <h2 class="section-title">My Qualifications</h2>
+                    <div class="title-underline"></div>
+                    <p class="section-subtitle">
+                        A verified summary of my work experience, educational background, and technical certifications.
+                    </p>
+                </div>
+
+                <!-- 3 Cards Layout -->
+                <div class="resume-grid">
+                    <!-- Card 1: Professional Experience -->
+                    <div class="resume-card">
+                        <div class="resume-card-preview">
+                            <div class="doc-mockup">
+                                <div class="doc-mockup-header">
+                                    <span class="doc-avatar">M</span>
+                                    <div>
+                                        <h5>Mahrab Hossen</h5>
+                                        <span>Software Engineer @ eGeneration</span>
+                                    </div>
+                                </div>
+                                <div class="doc-mockup-body">
+                                    <div class="doc-line bold">PHP, Laravel &amp; MySQL Engineering</div>
+                                    <div class="doc-line">eGeneration PLC (Oct 2025 – Present)</div>
+                                    <div class="doc-line muted">Enterprise ERP, SaaS &amp; AI-integrated platforms</div>
+                                    <div class="doc-tags">
+                                        <span>PHP</span><span>Laravel</span><span>MySQL</span><span>n8n</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="resume-card-info">
+                            <h4>Professional CV</h4>
+                            <p>Detailed work history at eGeneration PLC, technical capabilities, and production
+                                achievements.</p>
+                            <div class="resume-card-buttons">
+                                <button class="btn btn-sm btn-primary open-cv-modal" data-type="cv">
+                                    <i class="fas fa-eye"></i> View Professional Details
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 2: Academic Background -->
+                    <div class="resume-card">
+                        <div class="resume-card-preview">
+                            <div class="doc-mockup">
+                                <div class="doc-mockup-header">
+                                    <span class="doc-avatar edu"><i class="fas fa-graduation-cap"></i></span>
+                                    <div>
+                                        <h5>B.Sc. in CSE</h5>
+                                        <span>IUBAT University (2020 – 2025)</span>
+                                    </div>
+                                </div>
+                                <div class="doc-mockup-body">
+                                    <div class="doc-line bold">CGPA: 3.20 / 4.00</div>
+                                    <div class="doc-line">HSC Tongi Govt College · SSC Tamirul Millat (4.89)</div>
+                                    <div class="doc-line muted">Data Structures, Database Systems &amp; OOP</div>
+                                    <div class="doc-tags">
+                                        <span>IUBAT</span><span>CSE</span><span>B.Sc.</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="resume-card-info">
+                            <h4>Academic Background</h4>
+                            <p>Bachelor of Science in Computer Science &amp; Engineering with a focus on web systems and
+                                database architecture.</p>
+                            <div class="resume-card-buttons">
+                                <button class="btn btn-sm btn-primary open-cv-modal" data-type="academic">
+                                    <i class="fas fa-eye"></i> View Academic Record
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 3: AI & Automation -->
+                    <div class="resume-card">
+                        <div class="resume-card-preview">
+                            <div class="doc-mockup">
+                                <div class="doc-mockup-header">
+                                    <span class="doc-avatar cert"><i class="fas fa-robot"></i></span>
+                                    <div>
+                                        <h5>AI &amp; Automation</h5>
+                                        <span>Gemini Live API &amp; n8n</span>
+                                    </div>
+                                </div>
+                                <div class="doc-mockup-body">
+                                    <div class="doc-line bold">Gemini Live API Voice Systems</div>
+                                    <div class="doc-line">n8n Prospecting &amp; Outreach Pipelines</div>
+                                    <div class="doc-line muted">RESTful APIs, Google Search API &amp; Webhooks</div>
+                                    <div class="doc-tags">
+                                        <span>Gemini Live</span><span>n8n</span><span>APIs</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="resume-card-info">
+                            <h4>AI &amp; Automation</h4>
+                            <p>Proven track record building speech-to-speech AI platforms and automated multi-step data
+                                pipelines.</p>
+                            <div class="resume-card-buttons">
+                                <button class="btn btn-sm btn-primary open-cv-modal" data-type="cert">
+                                    <i class="fas fa-eye"></i> View Specializations
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================================
+             PORTFOLIO SECTION
+             ============================================================ -->
+        <section id="portfolio" class="portfolio-section">
+            <div class="container">
+                <div class="section-title-wrap">
+                    <span class="section-badge">Portfolio</span>
+                    <h2 class="section-title">Featured Projects</h2>
+                    <div class="title-underline"></div>
+                    <p class="section-subtitle">
+                        Key production web platforms, AI integrations, and automated systems built with modern
+                        engineering standards.
+                    </p>
+                </div>
+
+                <!-- Category Filter Tabs -->
+                <div class="portfolio-filters">
+                    <button class="filter-btn active" data-filter="all">All Projects</button>
+                    <button class="filter-btn" data-filter="laravel">PHP &amp; Laravel</button>
+                    <button class="filter-btn" data-filter="ai">AI &amp; Automation</button>
+                    <button class="filter-btn" data-filter="enterprise">ERP &amp; SaaS</button>
+                </div>
+
+                <!-- Project Showcase Grid -->
+                <div class="portfolio-grid">
+                    <!-- Project 1: eGInterview -->
+                    <div class="project-showcase-card" data-category="ai laravel">
+                        <div class="browser-mockup">
+                            <div class="browser-header">
+                                <div class="browser-dots">
+                                    <span></span><span></span><span></span>
+                                </div>
+                                <div class="browser-address">eginterview.egeneration.co</div>
+                            </div>
+                            <div class="browser-body">
+                                <img src="assets/AI-Interview Platform .png"
+                                    alt="eGCredit AI -AI-Powered Interview Platform" class="project-preview-img">
+                                <div class="project-overlay">
+                                    <a href="https://eginterview.egeneration.co/" target="_blank" rel="noopener"
+                                        class="btn btn-primary btn-sm">
+                                        <i class="fas fa-external-link-alt"></i> Live Project
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <div class="project-meta">
+                                <span class="project-badge">AI Intelligence Platform</span>
+                                <span class="status-live-tag"><i class="fas fa-circle"></i> Live</span>
+                            </div>
+                            <h3 class="project-name">eGInterview — AI-Powered Voice Interview Platform</h3>
+                            <p class="project-summary">
+                                Role-based AI interview platform for recruitment, loan, and account-opening workflows
+                                featuring real-time Bengali-English voice interviews, speaker transcription, and
+                                deterministic review.
+                            </p>
+                            <div class="project-tech-tags">
+                                <span>Laravel</span><span>Gemini Live
+                                    API</span><span>React</span><span>TypeScript</span><span>PostgreSQL</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 2: BNFWA -->
+                    <div class="project-showcase-card" data-category="laravel enterprise">
+                        <div class="browser-mockup">
+                            <div class="browser-header">
+                                <div class="browser-dots">
+                                    <span></span><span></span><span></span>
+                                </div>
+                                <div class="browser-address">bnfwa.navy.mil.bd</div>
+                            </div>
+                            <div class="browser-body">
+                                <img src="assets/BNFWA.png" alt="Bangladesh Navy Welfare Platform"
+                                    class="project-preview-img">
+                                <div class="project-overlay">
+                                    <a href="https://bnfwa.navy.mil.bd/" target="_blank" rel="noopener"
+                                        class="btn btn-primary btn-sm">
+                                        <i class="fas fa-external-link-alt"></i> Visit Live
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <div class="project-meta">
+                                <span class="project-badge">Production Web App</span>
+                                <span class="status-live-tag"><i class="fas fa-circle"></i> Live</span>
+                            </div>
+                            <h3 class="project-name">বাংলাদেশ নৌবাহিনী পরিবার কল্যাণ সংঘ (BNFWA)</h3>
+                            <p class="project-summary">
+                                Welfare management platform for Bangladesh Navy families — architected MySQL database
+                                schemas and Laravel backend features for member data, authentication, and welfare
+                                support.
+                            </p>
+                            <div class="project-tech-tags">
+                                <span>PHP</span><span>Laravel</span><span>MySQL</span><span>Bootstrap</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 3: eGSales AI -->
+                    <div class="project-showcase-card" data-category="ai laravel">
+                        <div class="browser-mockup">
+                            <div class="browser-header">
+                                <div class="browser-dots">
+                                    <span></span><span></span><span></span>
+                                </div>
+                                <div class="browser-address">egsales.egeneration.co</div>
+                            </div>
+                            <div class="browser-body">
+                                <img src="assets/Email-outreach.png"
+                                    alt="eGSales AI — Profile Scraping & Email Outreach" class="project-preview-img">
+                                <div class="project-overlay">
+                                    <a href="https://egsales.egeneration.co/" target="_blank" rel="noopener"
+                                        class="btn btn-primary btn-sm">
+                                        <i class="fas fa-external-link-alt"></i> Visit Live
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <div class="project-meta">
+                                <span class="project-badge">Automation &amp; Outreach</span>
+                                <span class="status-live-tag"><i class="fas fa-circle"></i> Live</span>
+                            </div>
+                            <h3 class="project-name">eGSales-AI — Profile Scraping &amp; Email Outreach</h3>
+                            <p class="project-summary">
+                                Built an automated n8n pipeline for professional-profile discovery using Google Custom
+                                Search API, data cleaning, JavaScript batch deduplication, and automated email
+                                nurturing.
+                            </p>
+                            <div class="project-tech-tags">
+                                <span>n8n</span><span>JavaScript</span><span>Google Search
+                                    API</span><span>Automation</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 4: School ERP -->
+                    <div class="project-showcase-card" data-category="laravel enterprise">
+                        <div class="browser-mockup">
+                            <div class="browser-header">
+                                <div class="browser-dots">
+                                    <span></span><span></span><span></span>
+                                </div>
+                                <div class="browser-address">erp.school.dev</div>
+                            </div>
+                            <div class="browser-body">
+                                <img src="assets/sms1.png" alt="School Management System (ERP)"
+                                    class="project-preview-img">
+                                <div class="project-overlay">
+                                    <a href="https://github.com/Likhon1998/school-management-system" target="_blank" rel="noopener" class="btn btn-primary btn-sm">
+                                        <i class="fab fa-github"></i> GitHub
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <div class="project-meta">
+                                <span class="project-badge">Enterprise ERP</span>
+                                <span class="status-complete-tag">Completed</span>
+                            </div>
+                            <h3 class="project-name">School Management System (ERP)</h3>
+                            <p class="project-summary">
+                                Robust ERP system handling student records, fee collection, attendance tracking, and
+                                report generation with scalable MySQL schemas and role-based permissions.
+                            </p>
+                            <div class="project-tech-tags">
+                                <span>PHP</span><span>Laravel</span><span>MySQL</span><span>Git</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 5: SaaS Subscription -->
+                    <div class="project-showcase-card" data-category="laravel enterprise">
+                        <div class="browser-mockup">
+                            <div class="browser-header">
+                                <div class="browser-dots">
+                                    <span></span><span></span><span></span>
+                                </div>
+                                <div class="browser-address">saas.mahrab.dev</div>
+                            </div>
+                            <div class="browser-body">
+                                <img src="assets/saas-home.png" alt="SaaS Subscription Management Platform"
+                                    class="project-preview-img">
+                                <div class="project-overlay">
+                                    <a href="https://github.com/Ami-mehrab/Saas-subscription_management_system" target="_blank" rel="noopener" class="btn btn-primary btn-sm">
+                                        <i class="fab fa-github"></i> GitHub
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <div class="project-meta">
+                                <span class="project-badge">Full Stack SaaS</span>
+                                <span class="status-complete-tag">Completed</span>
+                            </div>
+                            <h3 class="project-name">SaaS Subscription Management System</h3>
+                            <p class="project-summary">
+                                Multi-tenant SaaS subscription platform with automated recurring billing, plan
+                                management, SSLCommerz payment gateway integration, and Mailtrap notifications.
+                            </p>
+                            <div class="project-tech-tags">
+                                <span>Laravel</span><span>MySQL</span><span>SSLCommerz</span><span>Mailtrap</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 6: Job Portal -->
+                    <div class="project-showcase-card" data-category="laravel enterprise">
+                        <div class="browser-mockup">
+                            <div class="browser-header">
+                                <div class="browser-dots">
+                                    <span></span><span></span><span></span>
+                                </div>
+                                <div class="browser-address">jobs.mahrab.dev</div>
+                            </div>
+                            <div class="browser-body">
+                                <img src="assets/Job-portal.png" alt="Career & Recruitment Platform"
+                                    class="project-preview-img">
+                                <div class="project-overlay">
+                                    <a href="https://github.com/Ami-mehrab/Job-Portal-System" target="_blank" rel="noopener" class="btn btn-primary btn-sm">
+                                        <i class="fab fa-github"></i> GitHub
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <div class="project-meta">
+                                <span class="project-badge">Recruitment Platform</span>
+                                <span class="status-complete-tag">Completed</span>
+                            </div>
+                            <h3 class="project-name">Job Portal System — Recruitment Platform</h3>
+                            <p class="project-summary">
+                                Full-stack recruitment platform connecting candidates and employers, with job postings,
+                                resume submissions, smart filtering, and application status tracking.
+                            </p>
+                            <div class="project-tech-tags">
+                                <span>PHP</span><span>Laravel</span><span>MySQL</span><span>Bootstrap</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================================
+             SERVICES SECTION
+             ============================================================ -->
+        <section id="services" class="services-section">
+            <div class="container">
+                <div class="section-title-wrap">
+                    <span class="section-badge">Services</span>
+                    <h2 class="section-title">What I Do</h2>
+                    <div class="title-underline"></div>
+                    <p class="section-subtitle">
+                        Specialized software engineering services tailored to scale business platforms and automate
+                        operations.
+                    </p>
+                </div>
+
+                <div class="services-split-layout">
+                    <!-- Left Statement & Action -->
+                    <div class="services-headline-col">
+                        <h3 class="services-main-heading">
+                            From concept to deployment — I deliver seamless digital experiences
+                        </h3>
+                        <p class="services-main-desc">
+                            Whether architecting high-availability Laravel backends, integrating real-time AI speech
+                            models, or automating mission-critical business pipelines — I provide dependable technical
+                            execution and clean, maintainable code.
+                        </p>
+                        <div class="services-cta-wrap">
+                            <a href="#contact" class="btn btn-primary">
+                                <i class="fas fa-paper-plane"></i>
+                                <span>Start a Project</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Right 2x2 Services Grid -->
+                    <div class="services-cards-col">
+                        <div class="services-grid">
+                            <!-- Service 1 -->
+                            <div class="service-box">
+                                <div class="service-icon">
+                                    <i class="fas fa-laptop-code"></i>
+                                </div>
+                                <h4>Full-Stack Development</h4>
+                                <p>End-to-end web applications crafted with clean PHP, Laravel, and modern frontend
+                                    interfaces (React / Vue / Blade).</p>
+                            </div>
+
+                            <!-- Service 2 -->
+                            <div class="service-box">
+                                <div class="service-icon">
+                                    <i class="fas fa-mobile-alt"></i>
+                                </div>
+                                <h4>Responsive Web Design</h4>
+                                <p>Building mobile-first, pixel-perfect responsive layouts using modern CSS3, Bootstrap,
+                                    and Tailwind components.</p>
+                            </div>
+
+                            <!-- Service 3 -->
+                            <div class="service-box">
+                                <div class="service-icon">
+                                    <i class="fas fa-server"></i>
+                                </div>
+                                <h4>Backend &amp; REST APIs</h4>
+                                <p>Developing secure, high-speed backend systems, normalized relational database schemas
+                                    (MySQL/PostgreSQL), and robust APIs.</p>
+                            </div>
+
+                            <!-- Service 4 -->
+                            <div class="service-box">
+                                <div class="service-icon">
+                                    <i class="fas fa-robot"></i>
+                                </div>
+                                <h4>Workflow Automation &amp; AI</h4>
+                                <p>Designing automated pipelines with n8n and integrating conversational AI models
+                                    (Gemini Live API) to supercharge productivity.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================================
+             CONTACT SECTION ("LET'S BUILD SOMETHING AMAZING TOGETHER!")
+             ============================================================ -->
+        <section id="contact" class="contact-section">
+            <div class="container">
+                <div class="contact-split-layout">
+                    <!-- Left Info Column -->
+                    <div class="contact-info-col">
+                        <span class="contact-tag">CONTACT</span>
+                        <h2 class="contact-title">Let's Build Something Amazing Together!</h2>
+                        <p class="contact-desc">
+                            Have an exciting project, need technical consulting, or looking for a skilled Software
+                            Engineer to join your team? Feel free to reach out anytime.
+                        </p>
+
+                        <div class="contact-details-list">
+                            <div class="contact-detail-item">
+                                <div class="contact-icon-box">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div class="contact-detail-text">
+                                    <span class="detail-name">Email</span>
+                                    <a href="mailto:mahrabbappy33@gmail.com">mahrabbappy33@gmail.com</a>
+                                </div>
+                            </div>
+
+                            <div class="contact-detail-item">
+                                <div class="contact-icon-box">
+                                    <i class="fas fa-phone-alt"></i>
+                                </div>
+                                <div class="contact-detail-text">
+                                    <span class="detail-name">Phone</span>
+                                    <a href="tel:+8801950047492">+880 1950 047492</a>
+                                </div>
+                            </div>
+
+                            <div class="contact-detail-item">
+                                <div class="contact-icon-box">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div class="contact-detail-text">
+                                    <span class="detail-name">Location</span>
+                                    <span>Uttara, Dhaka, Bangladesh</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Social Media Links -->
+                        <div class="contact-social-links">
+                            <a href="https://www.linkedin.com/in/iam-mehrabbappy" target="_blank" rel="noopener"
+                                aria-label="LinkedIn" class="social-btn">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="https://github.com/Ami-mehrab" target="_blank" rel="noopener" aria-label="GitHub"
+                                class="social-btn">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://www.facebook.com/mehrabhossen.bappy" target="_blank" rel="noopener"
+                                aria-label="Facebook" class="social-btn">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="https://wa.me/8801950047492" target="_blank" rel="noopener" aria-label="WhatsApp"
+                                class="social-btn whatsapp-btn">
+                                <i class="fab fa-whatsapp"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Right Form Column -->
+                    <div class="contact-form-col">
+                        <div class="contact-form-card">
+                            <form id="contactForm" class="contact-form" novalidate>
+                                <div class="form-group">
+                                    <label for="name" class="form-label">Your Name</label>
+                                    <input type="text" id="name" name="name" class="form-control" placeholder="John Doe"
+                                        required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="email" class="form-label">Your Email</label>
+                                    <input type="email" id="email" name="email" class="form-control"
+                                        placeholder="john@example.com" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="subject" class="form-label">Subject</label>
+                                    <input type="text" id="subject" name="subject" class="form-control"
+                                        placeholder="Project Inquiry / Job Opportunity" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="message" class="form-label">Your Message</label>
+                                    <textarea id="message" name="message" class="form-control" rows="5"
+                                        placeholder="Tell me about your project or inquiry..." required></textarea>
+                                </div>
+
+                                <button type="submit" class="btn btn-primary btn-full" id="submitBtn">
+                                    <i class="fas fa-paper-plane"></i>
+                                    <span>Send Message</span>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
-    <footer>
-        <div class="footer-inner">
-            <p class="footer-logo">Mahrab Hossen</p>
-            <p class="footer-copy">&copy; 2025 Mahrab Hossen. All rights reserved.</p>
+    <!-- ============================================================
+         FOOTER
+         ============================================================ -->
+    <footer class="site-footer">
+        <div class="container footer-container">
+            <div class="footer-brand">
+                <span class="footer-logo-circle">M</span>
+                <span class="footer-logo-text">Mahrab Hossen</span>
+            </div>
+
+            <ul class="footer-nav">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#resume">Resume</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+            <p class="footer-copyright">
+                &copy; 2026 Mahrab Hossen. All rights reserved. Built with clean code &amp; dedication.
+            </p>
         </div>
     </footer>
 
+    <!-- ============================================================
+         FLOATING WHATSAPP
+         ============================================================ -->
+    <a href="https://wa.me/8801950047492" target="_blank" rel="noopener" class="float-whatsapp"
+        aria-label="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+        <span class="float-tooltip">Chat with Mahrab</span>
+    </a>
+
+    <!-- Back to Top Button -->
     <button class="back-to-top" id="backToTop" aria-label="Back to top">
         <i class="fas fa-arrow-up"></i>
     </button>
 
+    <!-- ============================================================
+         RESUME PREVIEW MODAL
+         ============================================================ -->
+    <div class="modal-backdrop" id="cvModal" aria-hidden="true">
+        <div class="modal-container">
+            <div class="modal-header">
+                <div class="modal-title-wrap">
+                    <i class="fas fa-file-alt"></i>
+                    <h3 id="modalTitle">Curriculum Vitae — Mahrab Hossen</h3>
+                </div>
+                <button class="modal-close" id="modalClose" aria-label="Close modal">&times;</button>
+            </div>
+            <div class="modal-body" id="modalContent">
+                <!-- Content dynamically populated by script.js -->
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-outline btn-sm" id="modalCloseBtn">Close</button>
+                <a href="assets/Mahrab_Hossen_CV.pdf" download="Mahrab_Hossen_CV.pdf" class="btn btn-primary btn-sm">
+                    <i class="fas fa-download"></i> Download PDF
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Custom JS -->
     <script src="js/script.js"></script>
 </body>
+
 </html>
