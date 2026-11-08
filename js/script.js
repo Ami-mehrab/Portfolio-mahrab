@@ -5,6 +5,7 @@
 
 document.addEventListener("DOMContentLoaded", () => {
     initHeaderScroll();
+    initThemeToggle();
     initMobileMenu();
     initScrollSpy();
     initCounters();
@@ -14,6 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
     initContactForm();
     initBackToTop();
     initSliders();
+    initWhatsAppPopup();
 });
 
 /* ============================================================
@@ -58,13 +60,48 @@ function initBackToTop() {
     });
 }
 
+function initThemeToggle() {
+    const themeToggles = document.querySelectorAll(".theme-toggle, #themeToggle");
+    if (!themeToggles.length) return;
+
+    // Check saved preference or default
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme === "dark") {
+        document.body.classList.add("dark-mode");
+        updateThemeIcons(true);
+    }
+
+    themeToggles.forEach(btn => {
+        btn.addEventListener("click", () => {
+            const isDark = document.body.classList.toggle("dark-mode");
+            localStorage.setItem("theme", isDark ? "dark" : "light");
+            updateThemeIcons(isDark);
+        });
+    });
+
+    function updateThemeIcons(isDark) {
+        themeToggles.forEach(btn => {
+            const icon = btn.querySelector("i");
+            if (icon) {
+                if (isDark) {
+                    icon.classList.remove("fa-moon");
+                    icon.classList.add("fa-sun");
+                } else {
+                    icon.classList.remove("fa-sun");
+                    icon.classList.add("fa-moon");
+                }
+            }
+        });
+    }
+}
+
 /* ============================================================
    2. MOBILE MENU & SMOOTH SCROLLING
    ============================================================ */
 function initMobileMenu() {
     const hamburger = document.getElementById("hamburger");
     const navMenu = document.getElementById("navMenu");
-    const navLinks = document.querySelectorAll(".nav-link, .btn-nav");
+    const navLinks = document.querySelectorAll(".nav-link, .nav-icon-link, .btn-nav");
 
     if (!hamburger || !navMenu) return;
 
@@ -248,43 +285,43 @@ function initResumeModal() {
         cv: {
             title: "Curriculum Vitae — Mahrab Hossen",
             html: `
-                <div style="font-family: inherit;">
-                    <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1.5rem; padding-bottom: 1rem; border-bottom: 1px solid #e2e8f0; flex-wrap: wrap; gap: 0.8rem;">
+                <div class="modal-cv-container">
+                    <div class="modal-cv-header">
                         <div>
-                            <h4 style="font-size: 1.4rem; font-weight: 800; color: #0f172a; margin-bottom: 0.25rem;">Mahrab Hossen</h4>
-                            <p style="color: #ea580c; font-weight: 700; font-size: 1rem;">Full-Stack Software Engineer | PHP · Laravel · MySQL</p>
-                            <p style="color: #64748b; font-size: 0.88rem;">Uttara, Dhaka, Bangladesh · 01950047492 · mahrabbappy33@gmail.com</p>
+                            <h4 class="modal-candidate-name">Mahrab Hossen</h4>
+                            <p class="modal-candidate-role">Full-Stack Software Engineer | PHP · Laravel · MySQL</p>
+                            <p class="modal-candidate-contact">Uttara, Dhaka, Bangladesh · +880 1950 047492 · mahrabbappy33@gmail.com</p>
                         </div>
                     </div>
 
-                    <div style="margin-bottom: 1.5rem;">
-                        <h5 style="font-size: 1rem; font-weight: 800; color: #0f172a; margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.04em;">Professional Summary</h5>
-                        <p style="color: #475569; font-size: 0.94rem; line-height: 1.7;">
+                    <div class="modal-cv-section">
+                        <h5 class="modal-cv-sectitle">Professional Summary</h5>
+                        <p class="modal-cv-text">
                             Full-Stack Software Engineer with over a year of experience building and maintaining web-based business applications using <strong>PHP, Laravel and MySQL</strong>, including ERP, SaaS and role-based systems. Skilled in database design, RESTful and third-party API integration, n8n automation and AI-integrated solutions. Working knowledge of Vue.js and Inertia.js, with experience taking features from requirements and database design through development, testing and continuous improvement.
                         </p>
                     </div>
 
-                    <div style="margin-bottom: 1.5rem;">
-                        <h5 style="font-size: 1rem; font-weight: 800; color: #0f172a; margin-bottom: 0.65rem; text-transform: uppercase; letter-spacing: 0.04em;">Work Experience</h5>
-                        <div style="background: #f8fafc; padding: 1.15rem; border-radius: 10px; border: 1px solid #eef2f6; margin-bottom: 1rem;">
-                            <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap;">
-                                <strong style="color: #0f172a; font-size: 1.05rem;">Software Engineer</strong>
-                                <span style="font-size: 0.84rem; color: #ea580c; font-weight: 700;">October 1, 2025 – Present</span>
+                    <div class="modal-cv-section">
+                        <h5 class="modal-cv-sectitle">Work Experience</h5>
+                        <div class="modal-cv-card">
+                            <div class="modal-card-top">
+                                <strong class="modal-role-title">Software Engineer</strong>
+                                <span class="modal-role-dates">October 1, 2025 – Present</span>
                             </div>
-                            <p style="color: #64748b; font-size: 0.88rem; margin-bottom: 0.5rem;">eGeneration PLC, Kuril, Dhaka, Bangladesh</p>
-                            <ul style="padding-left: 1.25rem; font-size: 0.88rem; color: #475569; line-height: 1.6;">
+                            <p class="modal-cv-company">eGeneration PLC, Kuril, Dhaka, Bangladesh</p>
+                            <ul class="modal-cv-list">
                                 <li>Work with the AI team to research AI use cases, evaluate technologies and support proof-of-concept development.</li>
                                 <li>Test and integrate third-party APIs to deliver reliable AI-powered application features.</li>
                                 <li>Actively develop and continuously enhance AI-integrated solutions, including the live <strong>eGInterview</strong> and <strong>eGSales-AI</strong> platforms.</li>
                             </ul>
                         </div>
-                        <div style="background: #f8fafc; padding: 1.15rem; border-radius: 10px; border: 1px solid #eef2f6;">
-                            <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap;">
-                                <strong style="color: #0f172a; font-size: 1.05rem;">Intern (PHP)</strong>
-                                <span style="font-size: 0.84rem; color: #64748b; font-weight: 600;">July 1, 2025 – September 30, 2025</span>
+                        <div class="modal-cv-card">
+                            <div class="modal-card-top">
+                                <strong class="modal-role-title">Intern (PHP)</strong>
+                                <span class="modal-role-dates muted">July 1, 2025 – September 30, 2025</span>
                             </div>
-                            <p style="color: #64748b; font-size: 0.88rem; margin-bottom: 0.5rem;">eGeneration PLC, Kuril, Dhaka, Bangladesh</p>
-                            <ul style="padding-left: 1.25rem; font-size: 0.88rem; color: #475569; line-height: 1.6;">
+                            <p class="modal-cv-company">eGeneration PLC, Kuril, Dhaka, Bangladesh</p>
+                            <ul class="modal-cv-list">
                                 <li>Developed and maintained web applications using PHP/Laravel and MySQL.</li>
                                 <li>Implemented REST APIs and role-based authentication for system users.</li>
                                 <li>Managed version control and collaborated on full-stack development using Git.</li>
@@ -292,24 +329,24 @@ function initResumeModal() {
                         </div>
                     </div>
 
-                    <div style="margin-bottom: 1.5rem;">
-                        <h5 style="font-size: 1rem; font-weight: 800; color: #0f172a; margin-bottom: 0.65rem; text-transform: uppercase; letter-spacing: 0.04em;">Technical Skills</h5>
-                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 0.75rem;">
-                            <div style="background: #f8fafc; padding: 0.85rem; border-radius: 8px; border: 1px solid #eef2f6;">
-                                <strong style="color: #0f172a; font-size: 0.88rem; display: block;">Backend</strong>
-                                <span style="font-size: 0.82rem; color: #64748b;">PHP (Laravel, CakePHP), OOP, RESTful API development, RBAC</span>
+                    <div class="modal-cv-section">
+                        <h5 class="modal-cv-sectitle">Technical Skills</h5>
+                        <div class="modal-cv-grid">
+                            <div class="modal-cv-griditem">
+                                <strong class="modal-skill-cat">Backend</strong>
+                                <span class="modal-skill-desc">PHP (Laravel, CakePHP), OOP, RESTful API development, RBAC</span>
                             </div>
-                            <div style="background: #f8fafc; padding: 0.85rem; border-radius: 8px; border: 1px solid #eef2f6;">
-                                <strong style="color: #0f172a; font-size: 0.88rem; display: block;">Databases</strong>
-                                <span style="font-size: 0.82rem; color: #64748b;">MySQL (schema design, query optimization), PostgreSQL, SQL Server</span>
+                            <div class="modal-cv-griditem">
+                                <strong class="modal-skill-cat">Databases</strong>
+                                <span class="modal-skill-desc">MySQL (schema design, query optimization), PostgreSQL, SQL Server</span>
                             </div>
-                            <div style="background: #f8fafc; padding: 0.85rem; border-radius: 8px; border: 1px solid #eef2f6;">
-                                <strong style="color: #0f172a; font-size: 0.88rem; display: block;">Automation & AI</strong>
-                                <span style="font-size: 0.82rem; color: #64748b;">n8n workflows, Gemini Live API, Google Custom Search API, PoC</span>
+                            <div class="modal-cv-griditem">
+                                <strong class="modal-skill-cat">Automation & AI</strong>
+                                <span class="modal-skill-desc">n8n workflows, Gemini Live API, Google Custom Search API, PoC</span>
                             </div>
-                            <div style="background: #f8fafc; padding: 0.85rem; border-radius: 8px; border: 1px solid #eef2f6;">
-                                <strong style="color: #0f172a; font-size: 0.88rem; display: block;">Frontend & Tools</strong>
-                                <span style="font-size: 0.82rem; color: #64748b;">JavaScript, TypeScript, React, Vue.js, Inertia.js, HTML5, CSS3, Git</span>
+                            <div class="modal-cv-griditem">
+                                <strong class="modal-skill-cat">Frontend & Tools</strong>
+                                <span class="modal-skill-desc">JavaScript, TypeScript, React, Vue.js, Inertia.js, HTML5, CSS3, Git</span>
                             </div>
                         </div>
                     </div>
@@ -319,78 +356,228 @@ function initResumeModal() {
         academic: {
             title: "Academic Background — Mahrab Hossen",
             html: `
-                <div style="font-family: inherit;">
-                    <div style="display: flex; gap: 1rem; align-items: flex-start; margin-bottom: 1.5rem; background: #fff5ed; padding: 1.25rem; border-radius: 12px; border: 1px solid rgba(234, 88, 12, 0.2);">
-                        <div style="width: 44px; height: 44px; border-radius: 10px; background: #ea580c; color: white; display: flex; align-items: center; justify-content: center; font-size: 1.3rem; flex-shrink: 0;">
+                <div class="modal-cv-container">
+                    <div class="modal-academic-banner">
+                        <div class="modal-academic-icon">
                             <i class="fas fa-graduation-cap"></i>
                         </div>
                         <div>
-                            <h4 style="font-size: 1.2rem; font-weight: 800; color: #0f172a;">B.Sc. in Computer Science &amp; Engineering</h4>
-                            <p style="color: #ea580c; font-weight: 600; font-size: 0.95rem;">International University of Business Agriculture and Technology (IUBAT)</p>
-                            <p style="color: #64748b; font-size: 0.88rem;">Passing Year: 2020 – 2025 · CGPA: <strong style="color: #0f172a;">3.20</strong> / 4.00</p>
+                            <h4 class="modal-academic-degree">B.Sc. in Computer Science &amp; Engineering</h4>
+                            <p class="modal-academic-inst">International University of Business Agriculture and Technology (IUBAT)</p>
+                            <p class="modal-academic-meta">Passing Year: 2020 – 2025 · CGPA: <strong>3.20</strong> / 4.00</p>
                         </div>
                     </div>
 
-                    <div style="display: flex; flex-direction: column; gap: 0.75rem; margin-bottom: 1.5rem;">
-                        <div style="background: #f8fafc; padding: 1rem; border-radius: 8px; border: 1px solid #eef2f6;">
-                            <div style="display: flex; justify-content: space-between; align-items: baseline;">
-                                <strong style="color: #0f172a;">Higher Secondary School Certificate (HSC)</strong>
-                                <span style="font-size: 0.82rem; color: #ea580c; font-weight: 700;">2019</span>
+                    <div class="modal-cv-section">
+                        <div class="modal-cv-card">
+                            <div class="modal-card-top">
+                                <strong class="modal-role-title">Higher Secondary School Certificate (HSC)</strong>
+                                <span class="modal-role-dates">2019</span>
                             </div>
-                            <p style="font-size: 0.88rem; color: #64748b;">Tongi Government College, Dhaka, Bangladesh</p>
+                            <p class="modal-cv-company">Tongi Government College, Dhaka, Bangladesh</p>
                         </div>
-                        <div style="background: #f8fafc; padding: 1rem; border-radius: 8px; border: 1px solid #eef2f6;">
-                            <div style="display: flex; justify-content: space-between; align-items: baseline;">
-                                <strong style="color: #0f172a;">Secondary School Certificate (SSC)</strong>
-                                <span style="font-size: 0.82rem; color: #ea580c; font-weight: 700;">2017</span>
+                        <div class="modal-cv-card">
+                            <div class="modal-card-top">
+                                <strong class="modal-role-title">Secondary School Certificate (SSC)</strong>
+                                <span class="modal-role-dates">2017</span>
                             </div>
-                            <p style="font-size: 0.88rem; color: #64748b;">Tamirul Millat Kamil Madrasah, Dhaka, Bangladesh · GPA: <strong style="color: #0f172a;">4.89</strong></p>
+                            <p class="modal-cv-company">Tamirul Millat Kamil Madrasah, Dhaka, Bangladesh · GPA: <strong>4.89</strong></p>
                         </div>
                     </div>
 
-                    <h5 style="font-size: 1rem; font-weight: 800; color: #0f172a; margin-bottom: 0.5rem; text-transform: uppercase;">Languages:</h5>
-                    <p style="font-size: 0.92rem; color: #475569;">
-                        <strong>Bangla:</strong> Native proficiency &nbsp;·&nbsp;
-                        <strong>English:</strong> Fluent (listening, speaking, reading, writing) &nbsp;·&nbsp;
-                        <strong>Arabic:</strong> Fluent reading &amp; writing, basic speaking
-                    </p>
+                    <div class="modal-cv-section">
+                        <h5 class="modal-cv-sectitle">Languages:</h5>
+                        <p class="modal-cv-text">
+                            <strong>Bangla:</strong> Native proficiency &nbsp;·&nbsp;
+                            <strong>English:</strong> Fluent (listening, speaking, reading, writing) &nbsp;·&nbsp;
+                            <strong>Arabic:</strong> Fluent reading &amp; writing, basic speaking
+                        </p>
+                    </div>
                 </div>
             `
         },
         cert: {
             title: "AI & Automation Specializations — Mahrab Hossen",
             html: `
-                <div style="font-family: inherit;">
-                    <div style="display: flex; flex-direction: column; gap: 1rem;">
-                        <div style="background: #f8fafc; border: 1px solid #eef2f6; border-radius: 10px; padding: 1.15rem;">
-                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.35rem;">
-                                <strong style="color: #0f172a; font-size: 1rem;">Gemini Live API &amp; Voice Intelligence Systems</strong>
-                                <span style="font-size: 0.78rem; font-weight: 700; color: #10b981; background: #ecfdf5; padding: 0.2rem 0.5rem; border-radius: 4px;">Live Implementation</span>
+                <div class="modal-cv-container">
+                    <div class="modal-cv-section">
+                        <div class="modal-cv-card highlight-card">
+                            <div class="modal-card-top">
+                                <strong class="modal-role-title">Gemini Live API &amp; Voice Intelligence Systems</strong>
+                                <span class="modal-tag-badge green">Live Implementation</span>
                             </div>
-                            <p style="color: #64748b; font-size: 0.88rem; line-height: 1.6;">
+                            <p class="modal-cv-text">
                                 Engineered the voice engine for the live <strong>eGInterview platform</strong>: real-time bilingual Bengali-English voice interviews, speaker transcription, structured assessment, and loan analyst evaluation.
                             </p>
                         </div>
 
-                        <div style="background: #f8fafc; border: 1px solid #eef2f6; border-radius: 10px; padding: 1.15rem;">
-                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.35rem;">
-                                <strong style="color: #0f172a; font-size: 1rem;">n8n Workflow Automation &amp; Prospecting Pipelines</strong>
-                                <span style="font-size: 0.78rem; font-weight: 700; color: #3b82f6; background: #eff6ff; padding: 0.2rem 0.5rem; border-radius: 4px;">Production Pipeline</span>
+                        <div class="modal-cv-card highlight-card">
+                            <div class="modal-card-top">
+                                <strong class="modal-role-title">n8n Workflow Automation &amp; Prospecting Pipelines</strong>
+                                <span class="modal-tag-badge blue">Production Pipeline</span>
                             </div>
-                            <p style="color: #64748b; font-size: 0.88rem; line-height: 1.6;">
+                            <p class="modal-cv-text">
                                 Built automated end-to-end multi-step pipelines for <strong>eGSales-AI</strong>: integrated Google Custom Search API for targeted profile discovery, JavaScript batch deduplication, data cleaning, and automated email outreach.
                             </p>
                         </div>
 
-                        <div style="background: #f8fafc; border: 1px solid #eef2f6; border-radius: 10px; padding: 1.15rem;">
-                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.35rem;">
-                                <strong style="color: #0f172a; font-size: 1rem;">Full-Stack PHP, Laravel &amp; MySQL Engineering</strong>
-                                <span style="font-size: 0.78rem; font-weight: 700; color: #8b5cf6; background: #f5f3ff; padding: 0.2rem 0.5rem; border-radius: 4px;">Core Specialty</span>
+                        <div class="modal-cv-card highlight-card">
+                            <div class="modal-card-top">
+                                <strong class="modal-role-title">Full-Stack PHP, Laravel &amp; MySQL Engineering</strong>
+                                <span class="modal-tag-badge purple">Core Specialty</span>
                             </div>
-                            <p style="color: #64748b; font-size: 0.88rem; line-height: 1.6;">
+                            <p class="modal-cv-text">
                                 Comprehensive production experience in relational database optimization, schema design, role-based access control, RESTful APIs, and modern frontends with Vue/Inertia/React.
                             </p>
                         </div>
+                    </div>
+                </div>
+            `
+        },
+        "software-engineer": {
+            title: "Software Engineer — eGeneration PLC",
+            html: `
+                <div class="modal-cv-container">
+                    <div class="modal-cv-header">
+                        <div>
+                            <h4 class="modal-candidate-name">Software Engineer</h4>
+                            <p class="modal-candidate-role">eGeneration PLC &mdash; Kuril, Dhaka, Bangladesh</p>
+                            <p class="modal-candidate-contact"><i class="far fa-calendar-alt"></i> October 1, 2025 – Present &nbsp;·&nbsp; <span class="exp-badge current" style="display:inline-flex; font-size: 0.75rem; padding: 0.2rem 0.65rem;"><i class="fas fa-circle"></i> Current Full-Time Role</span></p>
+                        </div>
+                    </div>
+
+                    <div class="modal-cv-section">
+                        <h5 class="modal-cv-sectitle">Key Highlights &amp; Specializations</h5>
+                        <div class="modal-cv-card highlight-card" style="margin-bottom: 0.75rem;">
+                            <p class="modal-cv-text">
+                                <strong style="color: var(--primary);"><i class="fas fa-robot"></i> AI &amp; Automation:</strong> Live systems like <strong>eGInterview</strong> (Gemini Live API real-time voice interview engine) and <strong>eGSales-AI</strong> (n8n automated prospecting pipelines).
+                            </p>
+                        </div>
+                        <div class="modal-cv-card highlight-card">
+                            <p class="modal-cv-text">
+                                <strong style="color: var(--primary);"><i class="fas fa-server"></i> Backend &amp; Databases:</strong> Scalable PHP/Laravel architectures, normalized MySQL schemas, query optimization, and secure RESTful APIs.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="modal-cv-section">
+                        <h5 class="modal-cv-sectitle">Key Responsibilities & Deliverables</h5>
+                        <ul class="modal-cv-list">
+                            <li>Work directly with the AI engineering team to research practical enterprise use cases, evaluate LLM &amp; voice models, and develop rapid proof-of-concept (PoC) solutions.</li>
+                            <li>Design, benchmark, and integrate third-party RESTful APIs to deliver dependable, production-ready AI-powered application features.</li>
+                            <li>Architect, develop, and continuously enhance live AI-integrated systems, specifically the live <strong>eGInterview</strong> and <strong>eGSales-AI</strong> platforms.</li>
+                            <li>Design normalized MySQL database schemas, write secure controller logic, optimize query performance, and ensure strict role-based access control (RBAC).</li>
+                        </ul>
+                    </div>
+
+                    <div class="modal-cv-section">
+                        <h5 class="modal-cv-sectitle">Flagship Production Platforms</h5>
+                        <div class="modal-cv-card highlight-card">
+                            <div class="modal-card-top">
+                                <strong class="modal-role-title">eGInterview — AI-Powered Voice Interview Platform</strong>
+                                <span class="modal-tag-badge green">Live Platform</span>
+                            </div>
+                            <p class="modal-cv-text">
+                                Engineered the voice engine leveraging Gemini Live API for real-time bilingual Bengali-English spoken interviews, candidate transcription, evaluation scoring, and automated reports.
+                            </p>
+                        </div>
+                        <div class="modal-cv-card highlight-card">
+                            <div class="modal-card-top">
+                                <strong class="modal-role-title">eGSales-AI — Automated Prospecting & Outreach Pipeline</strong>
+                                <span class="modal-tag-badge blue">Production Pipeline</span>
+                            </div>
+                            <p class="modal-cv-text">
+                                Built multi-step automated n8n workflows connecting Google Custom Search API, JavaScript batch deduplication, data enrichment, and automated email nurturing.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="modal-cv-section">
+                        <h5 class="modal-cv-sectitle">Core Tech Stack</h5>
+                        <div class="exp-tags" style="margin-bottom: 0;">
+                            <span>PHP 8+</span><span>Laravel</span><span>MySQL</span><span>Gemini Live API</span><span>n8n</span><span>REST APIs</span><span>Git</span>
+                        </div>
+                    </div>
+                </div>
+            `
+        },
+        "internship": {
+            title: "Intern (PHP Developer) — eGeneration PLC",
+            html: `
+                <div class="modal-cv-container">
+                    <div class="modal-cv-header">
+                        <div>
+                            <h4 class="modal-candidate-name">Intern &mdash; PHP Developer</h4>
+                            <p class="modal-candidate-role">eGeneration PLC &mdash; Kuril, Dhaka, Bangladesh</p>
+                            <p class="modal-candidate-contact"><i class="far fa-calendar-alt"></i> July 1, 2025 – September 30, 2025 &nbsp;·&nbsp; <span class="exp-badge past" style="display:inline-flex; font-size: 0.75rem; padding: 0.2rem 0.65rem;"><i class="fas fa-check-circle"></i> Completed</span></p>
+                        </div>
+                    </div>
+
+                    <div class="modal-cv-section">
+                        <h5 class="modal-cv-sectitle">Key Highlights &amp; Focus</h5>
+                        <div class="modal-cv-card highlight-card" style="margin-bottom: 0.75rem;">
+                            <p class="modal-cv-text">
+                                <strong style="color: var(--primary);"><i class="fas fa-code"></i> PHP &amp; Laravel Development:</strong> Developed web application modules, controllers, and normalized MySQL schemas.
+                            </p>
+                        </div>
+                        <div class="modal-cv-card highlight-card">
+                            <p class="modal-cv-text">
+                                <strong style="color: var(--primary);"><i class="fas fa-shield-alt"></i> REST APIs &amp; RBAC:</strong> Implemented secure role-based access control authentication and endpoints for system users.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="modal-cv-section">
+                        <h5 class="modal-cv-sectitle">Internship Contributions &amp; Core Work</h5>
+                        <ul class="modal-cv-list">
+                            <li>Developed and maintained core web application modules using modern PHP, Laravel, and MySQL under engineering leadership.</li>
+                            <li>Implemented secure RESTful API endpoints and role-based access control (RBAC) authentication for multi-tier user portals.</li>
+                            <li>Managed Git branch workflows, pull requests, and collaborative feature development in cross-functional agile teams.</li>
+                            <li>Conducted code reviews, database query tuning, and resolved backend issues to ensure high platform reliability.</li>
+                        </ul>
+                    </div>
+
+                    <div class="modal-cv-section">
+                        <h5 class="modal-cv-sectitle">Tech Stack</h5>
+                        <div class="exp-tags" style="margin-bottom: 0;">
+                            <span>PHP</span><span>Laravel</span><span>MySQL</span><span>REST APIs</span><span>Authentication (RBAC)</span><span>Git</span><span>Bootstrap</span>
+                        </div>
+                    </div>
+                </div>
+            `
+        },
+        "education": {
+            title: "Academic Background — IUBAT",
+            html: `
+                <div class="modal-cv-container">
+                    <div class="modal-academic-banner">
+                        <div class="modal-academic-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div>
+                            <h4 class="modal-academic-degree">B.Sc. in Computer Science &amp; Engineering</h4>
+                            <p class="modal-academic-inst">International University of Business Agriculture and Technology (IUBAT)</p>
+                            <p class="modal-academic-meta">Passing Year: 2020 – 2025 &nbsp;·&nbsp; CGPA: <strong>3.20</strong> / 4.00</p>
+                        </div>
+                    </div>
+
+                    <div class="modal-cv-section">
+                        <h5 class="modal-cv-sectitle">Academic Foundation</h5>
+                        <div class="modal-cv-card highlight-card" style="margin-bottom: 0.75rem;">
+                            <p class="modal-cv-text">
+                                <strong style="color: var(--primary);"><i class="fas fa-graduation-cap"></i> Academic Foundation:</strong> B.Sc. in CSE with CGPA 3.20/4.00, focusing on Software Engineering, Relational Database Systems, and Object-Oriented Architectures.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="modal-cv-section">
+                        <h5 class="modal-cv-sectitle">Academic Focus &amp; Key Coursework</h5>
+                        <ul class="modal-cv-list">
+                            <li><strong>Database Architectures:</strong> Relational schema design, SQL query optimization, transactions, and indexing.</li>
+                            <li><strong>Object-Oriented Design:</strong> OOP principles, design patterns, MVC architectures, and clean code standards.</li>
+                            <li><strong>Data Structures &amp; Algorithms:</strong> Problem solving, algorithmic complexity, search and sorting techniques.</li>
+                            <li><strong>Web Engineering:</strong> Full-stack development, network security, and RESTful web architectures.</li>
+                        </ul>
                     </div>
                 </div>
             `
@@ -558,5 +745,46 @@ function initSliders() {
         wrap.querySelector(".sl-prev")?.addEventListener("click", e => { e.stopPropagation(); show(cur - 1); });
         wrap.querySelector(".sl-next")?.addEventListener("click", e => { e.stopPropagation(); show(cur + 1); });
         dots.forEach((d, i) => d.addEventListener("click", e => { e.stopPropagation(); show(i); }));
+    });
+}
+
+/* ============================================================
+   10. INTERACTIVE WHATSAPP POPUP CHAT WIDGET
+   ============================================================ */
+function initWhatsAppPopup() {
+    const widget = document.getElementById("whatsappWidget");
+    const popup = document.getElementById("whatsappChatPopup");
+    const floatBtn = document.getElementById("whatsappFloatBtn");
+    const closeBtn = document.getElementById("whatsappPopupClose");
+
+    if (!widget || !popup || !floatBtn) return;
+
+    floatBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        popup.classList.toggle("active");
+    });
+
+    if (closeBtn) {
+        closeBtn.addEventListener("click", (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            popup.classList.remove("active");
+            sessionStorage.setItem("wa_popup_closed", "true");
+        });
+    }
+
+    // Auto open popup after 3.5 seconds if user hasn't closed it in this session
+    setTimeout(() => {
+        if (!sessionStorage.getItem("wa_popup_closed")) {
+            popup.classList.add("active");
+        }
+    }, 3500);
+
+    // Close when clicking outside
+    document.addEventListener("click", (e) => {
+        if (!widget.contains(e.target)) {
+            popup.classList.remove("active");
+        }
     });
 }

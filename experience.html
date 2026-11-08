@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experience — Mahrab Hossen</title>
+    <meta name="description"
+        content="Professional work experience, software engineering roles at eGeneration PLC, and qualifications of Mahrab Hossen.">
+
+    <!-- Favicon -->
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23ea580c'/><text x='50' y='68' font-size='56' text-anchor='middle' fill='%23ffffff' font-family='sans-serif' font-weight='bold'>M</text></svg>">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&family=DM+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- ============================================================
+         HEADER & NAVIGATION (FLOATING CAPSULE DESIGN)
+         ============================================================ -->
+    <header id="header" class="site-header">
+        <div class="nav-container">
+            <a href="index.html#hero" class="brand-logo">
+                <span class="brand-name">Mahrab Hossen</span>
+            </a>
+
+            <div class="hamburger" id="hamburger" aria-label="Toggle navigation" role="button" tabindex="0">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <nav class="nav-menu" id="navMenu">
+                <ul class="nav-list">
+                    <li><a href="index.html#hero" class="nav-link">Home</a></li>
+                    <li><a href="index.html#about" class="nav-link">About</a></li>
+                    <li><a href="index.html#skills" class="nav-link">Skills</a></li>
+                    <li><a href="index.html#portfolio" class="nav-link">Projects</a></li>
+                    <li><a href="index.html#services" class="nav-link">Services</a></li>
+                    <li><a href="experience.html" class="nav-link active">Experience</a></li>
+                    <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+                </ul>
+                <div class="nav-social-icons">
+                    <a href="https://github.com/Ami-mehrab" target="_blank" rel="noopener" class="nav-icon-link" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/iam-mehrabbappy" target="_blank" rel="noopener" class="nav-icon-link" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://www.facebook.com/mehrabhossen.bappy" target="_blank" rel="noopener" class="nav-icon-link" aria-label="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <button class="nav-icon-btn theme-toggle" id="themeToggle" aria-label="Toggle Theme">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- ============================================================
+             PAGE HERO / HEADER
+             ============================================================ -->
+        <section class="page-hero">
+            <div class="container">
+                <div class="section-title-wrap">
+                    <span class="section-badge">Career Journey</span>
+                    <h1 class="section-title">Work Experience</h1>
+                    <div class="title-underline"></div>
+                    <p class="section-subtitle">
+                        A detailed timeline of my professional roles, engineering contributions, and academic background.
+                    </p>
+                </div>
+
+                <!-- Interactive Filter Tabs (Eliminates long boring mobile scroll) -->
+                <div class="exp-filter-nav">
+                    <button type="button" class="exp-filter-btn active" data-exp-filter="all">
+                        <i class="fas fa-layer-group"></i> All Records
+                    </button>
+                    <button type="button" class="exp-filter-btn" data-exp-filter="current">
+                        <i class="fas fa-briefcase"></i> Current Role
+                    </button>
+                    <button type="button" class="exp-filter-btn" data-exp-filter="intern">
+                        <i class="fas fa-laptop-code"></i> Internship
+                    </button>
+                    <button type="button" class="exp-filter-btn" data-exp-filter="education">
+                        <i class="fas fa-graduation-cap"></i> Education
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================================
+             EXPERIENCE TIMELINE CONTENT
+             ============================================================ -->
+        <section class="exp-page-section">
+            <div class="container">
+                <div class="exp-timeline">
+
+                    <!-- Role 1: Software Engineer (Current) -->
+                    <div class="exp-item exp-filterable" data-exp-category="current">
+                        <div class="exp-timeline-left">
+                            <div class="exp-logo-wrap">
+                                <span class="exp-logo-circle">eG</span>
+                            </div>
+                            <div class="exp-connector"></div>
+                        </div>
+                        <div class="exp-card">
+                            <div class="exp-card-top">
+                                <div class="exp-role-block">
+                                    <h2 class="exp-role-title">Software Engineer</h2>
+                                    <p class="exp-company">
+                                        <i class="fas fa-building"></i> eGeneration PLC &mdash; Kuril, Dhaka, Bangladesh
+                                    </p>
+                                </div>
+                                <div class="exp-meta">
+                                    <span class="exp-badge current"><i class="fas fa-circle"></i> Current Role</span>
+                                    <span class="exp-dates"><i class="far fa-calendar-alt"></i> Oct 1, 2025 &ndash; Present</span>
+                                </div>
+                            </div>
+
+                            <div class="exp-tags">
+                                <span>PHP 8+</span>
+                                <span>Laravel</span>
+                                <span>MySQL</span>
+                                <span>API Integration</span>
+                                <span>n8n Workflows</span>
+                                <span>RESTful APIs</span>
+                                <span>AI & Automation</span>
+                            </div>
+
+                            <!-- Full Detailed Bullets (Desktop view) -->
+                            <ul class="exp-bullets">
+                                <li>Work with the AI team to research AI use cases, evaluate emerging technologies, and support rapid proof-of-concept (PoC) development.</li>
+                                <li>Test, benchmark, and integrate third-party APIs to deliver dependable, production-ready AI-powered features.</li>
+                                <li>Actively develop and continuously enhance live AI solutions, including <strong>eGInterview</strong> (real-time voice AI interview platform with Gemini Live API) and <strong>eGSales-AI</strong> (automated prospecting pipeline with n8n &amp; Google Custom Search).</li>
+                                <li>Architect optimized relational MySQL database schemas, write secure backend controllers, and build maintainable RESTful services.</li>
+                            </ul>
+
+                            <!-- Modal Popup Trigger Button -->
+                            <div class="exp-card-actions">
+                                <button type="button" class="btn btn-outline btn-sm open-cv-modal exp-details-btn" data-type="software-engineer">
+                                    <i class="fas fa-file-alt"></i>
+                                    <span>View Full Details</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Role 2: Intern (PHP Developer) -->
+                    <div class="exp-item exp-filterable" data-exp-category="intern">
+                        <div class="exp-timeline-left">
+                            <div class="exp-logo-wrap">
+                                <span class="exp-logo-circle intern">eG</span>
+                            </div>
+                            <div class="exp-connector"></div>
+                        </div>
+                        <div class="exp-card">
+                            <div class="exp-card-top">
+                                <div class="exp-role-block">
+                                    <h2 class="exp-role-title">Intern &mdash; PHP Developer</h2>
+                                    <p class="exp-company">
+                                        <i class="fas fa-building"></i> eGeneration PLC &mdash; Kuril, Dhaka, Bangladesh
+                                    </p>
+                                </div>
+                                <div class="exp-meta">
+                                    <span class="exp-badge past"><i class="fas fa-check-circle"></i> Completed</span>
+                                    <span class="exp-dates"><i class="far fa-calendar-alt"></i> Jul 1, 2025 &ndash; Sep 30, 2025</span>
+                                </div>
+                            </div>
+
+                            <div class="exp-tags">
+                                <span>PHP</span>
+                                <span>Laravel</span>
+                                <span>MySQL</span>
+                                <span>REST APIs</span>
+                                <span>Authentication</span>
+                                <span>Git</span>
+                            </div>
+
+                            <!-- Full Detailed Bullets (Desktop view) -->
+                            <ul class="exp-bullets">
+                                <li>Developed and maintained core web applications using modern PHP, Laravel, and MySQL under engineering leadership.</li>
+                                <li>Implemented secure RESTful API endpoints and role-based access control (RBAC) authentication for multi-tier user portals.</li>
+                                <li>Managed Git branch workflows, pull requests, and collaborative feature deployment in team environments.</li>
+                            </ul>
+
+                            <!-- Modal Popup Trigger Button -->
+                            <div class="exp-card-actions">
+                                <button type="button" class="btn btn-outline btn-sm open-cv-modal exp-details-btn" data-type="internship">
+                                    <i class="fas fa-file-alt"></i>
+                                    <span>View Full Details</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Education Qualification Card -->
+                    <div class="exp-item exp-filterable" data-exp-category="education">
+                        <div class="exp-timeline-left">
+                            <div class="exp-logo-wrap">
+                                <span class="exp-logo-circle" style="background: #2563eb;"><i class="fas fa-graduation-cap"></i></span>
+                            </div>
+                        </div>
+                        <div class="exp-card">
+                            <div class="exp-card-top">
+                                <div class="exp-role-block">
+                                    <h2 class="exp-role-title">B.Sc. in Computer Science &amp; Engineering</h2>
+                                    <p class="exp-company">
+                                        <i class="fas fa-university"></i> International University of Business Agriculture &amp; Technology (IUBAT)
+                                    </p>
+                                </div>
+                                <div class="exp-meta">
+                                    <span class="exp-badge" style="background: rgba(37, 99, 235, 0.12); color: #2563eb;"><i class="fas fa-award"></i> Degree Awarded</span>
+                                    <span class="exp-dates"><i class="far fa-calendar-alt"></i> 2020 &ndash; 2025</span>
+                                </div>
+                            </div>
+
+                            <div class="exp-tags">
+                                <span>CGPA: 3.20 / 4.00</span>
+                                <span>Database Architectures</span>
+                                <span>OOP</span>
+                                <span>Web Engineering</span>
+                            </div>
+
+                            <!-- Full Detailed Bullets (Desktop view) -->
+                            <ul class="exp-bullets">
+                                <li>Graduated with a strong academic foundation in software design patterns, relational databases, data structures, and algorithms.</li>
+                                <li>Completed coursework and practical projects in Full-Stack Web Development, Computer Networks, and Object-Oriented Software Engineering.</li>
+                            </ul>
+
+                            <!-- Modal Popup Trigger Button -->
+                            <div class="exp-card-actions">
+                                <button type="button" class="btn btn-outline btn-sm open-cv-modal exp-details-btn" data-type="education">
+                                    <i class="fas fa-graduation-cap"></i>
+                                    <span>View Academic Details</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Bottom CTA Card -->
+                <div class="exp-page-cta">
+                    <div class="exp-cta-text">
+                        <h3>Interested in working together?</h3>
+                        <p>I'm always open to discussing new projects, technical challenges, or full-time opportunities.</p>
+                    </div>
+                    <div class="exp-cta-actions">
+                        <a href="index.html#contact" class="btn btn-primary btn-pill">
+                            <i class="fas fa-paper-plane"></i>
+                            <span>Get in Touch</span>
+                        </a>
+                        <a href="index.html#portfolio" class="btn btn-outline btn-pill">
+                            <i class="fas fa-th-large"></i>
+                            <span>View Projects</span>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- ============================================================
+         FOOTER
+         ============================================================ -->
+    <footer class="site-footer">
+        <div class="container footer-container">
+            <div class="footer-brand">
+                <span class="footer-logo-circle">M</span>
+                <span class="footer-logo-text">Mahrab Hossen</span>
+            </div>
+
+            <ul class="footer-nav">
+                <li><a href="index.html#hero">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#skills">Skills</a></li>
+                <li><a href="index.html#portfolio">Projects</a></li>
+                <li><a href="index.html#services">Services</a></li>
+                <li><a href="experience.html" class="active">Experience</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+
+            <p class="footer-copyright">
+                &copy; 2026 Mahrab Hossen. All rights reserved. Built with clean code &amp; dedication.
+            </p>
+        </div>
+    </footer>
+
+    <!-- ============================================================
+         FLOATING WHATSAPP CHAT WIDGET & POPUP
+         ============================================================ -->
+    <div class="whatsapp-widget-container" id="whatsappWidget">
+        <div class="whatsapp-chat-popup" id="whatsappChatPopup">
+            <div class="whatsapp-popup-header">
+                <span class="whatsapp-popup-title">Welcome to Mahrab Hossen’s Portfolio!</span>
+                <button type="button" class="whatsapp-popup-close" id="whatsappPopupClose" aria-label="Close chat popup">&times;</button>
+            </div>
+            <div class="whatsapp-popup-body">
+                <p class="whatsapp-popup-greeting">
+                    Hi there! I'm <strong>Mahrab Hossen</strong>, a Software Engineer.
+                </p>
+                <p class="whatsapp-popup-message">
+                    Feel free to ask me anything or discuss a project. Click the button below to chat with me on WhatsApp.
+                </p>
+                <a href="https://wa.me/8801950047492" target="_blank" rel="noopener" class="whatsapp-popup-btn">
+                    Open WhatsApp
+                </a>
+            </div>
+        </div>
+
+        <button type="button" class="float-whatsapp" id="whatsappFloatBtn" aria-label="Chat on WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+            <span class="float-tooltip">Chat with Mahrab</span>
+        </button>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- ============================================================
+         ROLE DETAILS MODAL (FULL EXPERIENCE BREAKDOWN POPUP)
+         ============================================================ -->
+    <div class="modal-backdrop" id="cvModal" aria-hidden="true">
+        <div class="modal-container">
+            <div class="modal-header">
+                <div class="modal-title-wrap">
+                    <i class="fas fa-briefcase"></i>
+                    <h3 id="modalTitle">Role Details</h3>
+                </div>
+                <button class="modal-close" id="modalClose" aria-label="Close modal">&times;</button>
+            </div>
+            <div class="modal-body" id="modalContent">
+                <!-- Content dynamically populated by script.js -->
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-outline btn-sm" id="modalCloseBtn">Close</button>
+                <a href="assets/Mahrab_Hossen_CV.pdf" download="Mahrab_Hossen_CV.pdf" class="btn btn-primary btn-sm">
+                    <i class="fas fa-download"></i> Download Full CV
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Custom JS -->
+    <script src="js/script.js"></script>
+
+    <!-- Interactive Filter Script for Experience Page -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const filterBtns = document.querySelectorAll(".exp-filter-btn");
+            const items = document.querySelectorAll(".exp-filterable");
+
+            filterBtns.forEach(btn => {
+                btn.addEventListener("click", () => {
+                    filterBtns.forEach(b => b.classList.remove("active"));
+                    btn.classList.add("active");
+
+                    const filter = btn.getAttribute("data-exp-filter");
+
+                    items.forEach(item => {
+                        const cat = item.getAttribute("data-exp-category");
+                        if (filter === "all" || cat === filter) {
+                            item.style.display = "grid";
+                            item.style.opacity = "0";
+                            item.style.transform = "translateY(10px)";
+                            setTimeout(() => {
+                                item.style.transition = "all 0.3s ease";
+                                item.style.opacity = "1";
+                                item.style.transform = "translateY(0)";
+                            }, 30);
+                        } else {
+                            item.style.display = "none";
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
+
